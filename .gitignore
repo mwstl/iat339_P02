@@ -1,5 +1,4 @@
-# Object file
-*.o
-
-# Ada Library Information
-*.ali
+# Ignoring files
+*.DS_Store
+*.jpg
+*.jpeg
