@@ -108,6 +108,11 @@ p {
   width: 100%;
 }
 
+header p{
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
 a {
   text-decoration: none;
   color: var(--text);
@@ -131,6 +136,8 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+
+
 
 pre {
   white-space: pre-wrap;
