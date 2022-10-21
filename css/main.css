@@ -213,6 +213,7 @@ code {
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-top: 1rem;
 }
 .montserrat,
 .roboto {
@@ -223,6 +224,10 @@ code {
 }
 .font-use {
   font-size: 1rem;
+}
+.text-example {
+  font-size: 1.25rem;
+  color: var(--second);
 }
 
 .text-link,
