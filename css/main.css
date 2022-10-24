@@ -6,15 +6,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Outfit:wght@100;300;400;600&family=Roboto+Mono:wght@200;300;400;500&display=swap");
 
 :root {
-  --bg: #191c1b;
+  --bg: #f7f4ef;
   --bg-lighter: #343635;
-  --text: #e1e3e0;
+  --text: #030035;
   --main: #54dcb9;
   --second: #b2ccc2;
   --error: #ffb4ab;
   --light-green: #bfc9c3;
   --mid-green: #89938e;
-  --dark-green: #3f4945;
+  --dark-green: #a7a5ab;
 }
 
 * {
@@ -481,7 +481,7 @@ ol {
   border-radius: 1rem;
   padding: 1.5rem;
   position: relative;
-  background-color: var(--bg-lighter);
+  background-color: var(--bg);
 }
 
 .article-card {
@@ -875,7 +875,7 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 55%;
   flex-direction: column;
   align-items: center;
-  background-color: var(--dark-green);
+  background-color: var(--second);
   padding: 8vh 10%;
   gap: 3rem;
 }
