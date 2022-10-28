@@ -1012,14 +1012,15 @@ SERVICES SECTION
   font-style: italic;
   font-weight: bold;
   font-size: 8rem;
-  box-shadow: rgba(137, 147, 142, 0.2) 0px 48px 100px 0px;
-  background-color: var(--bg);
+  /* box-shadow: rgba(137, 147, 142, 0.2) 0px 48px 100px 0px; */
+  /* background-color: var(--bg); */
   width: fit-content;
   margin: 0;
   line-height: 1.5em;
   border-radius: 1rem;
   padding: 1rem;
-  border: 1px solid var(--mid-green);
+  /* border: 1px solid var(--mid-green); */
+  text-shadow: 2px 2px 4px #ffffff;
   margin-bottom: 1rem;
 }
 
@@ -1268,9 +1269,10 @@ footer {
 }
 
 .footer-social {
-  width: 1rem;
-  height: 1rem;
-  background-color: #030035;
+  /* width: ;
+  height: 0.1rem; */
+  /* background-color: #030035; */
+ 
   margin: 0.5em;
 }
 
@@ -1325,9 +1327,13 @@ footer {
   align-items: center;
 }
 
+
 .booking-line-3 {
   padding: 0 0.75em;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
+
 
 .form-text {
   width: fit-content;
@@ -1436,6 +1442,8 @@ footer {
     height: 25%;
     width: 75%;
   }
+
+
   .checkout {
     flex-direction: column;
   }
