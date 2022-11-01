@@ -1158,6 +1158,74 @@ SERVICES SECTION
 }
 
 /* 
+  PORTFOLIO
+*/
+
+.portfolio-content{
+  margin:8rem;
+  margin-bottom: none;
+}
+
+.title-content{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.left-title>h1{
+  font-size: 6rem;
+}
+
+.right-title{
+  width: 300px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.3rem solid var(--second);
+}
+
+.right-title>h5{
+  font-weight: 600;
+}
+
+.boxing-line{
+  display: flex;
+  justify-content: space-between;
+  height:28rem;
+  margin-top: 1.5rem;
+  border-top:0.1rem solid var(--dark-green) ;
+}
+
+.box-left{
+  width:20vw;
+}
+
+.box-middle{
+  width:40%;
+  border-left: 0.1rem solid var(--dark-green);
+  padding-left:2rem;
+  padding-top: 2rem;
+}
+
+.box-middle>h2{
+ font-weight: 500;
+}
+
+.box-middle>p{
+  width:80%;
+  margin-top: 3rem;
+  font-weight: 300;
+}
+
+.box-right{
+  border-left: 0.1rem solid var(--dark-green);
+}
+
+.box-right img{
+  width: 20vw;
+  height: 50vh;
+  margin: 2rem;
+}
+/* 
   FOOTER
 */
 
