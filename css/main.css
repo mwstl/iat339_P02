@@ -1166,7 +1166,7 @@ SERVICES SECTION
   margin-bottom: none;
 }
 
-.title-content{
+.portfolio-title-content{
   display: flex;
   justify-content: space-between;
   
@@ -1225,6 +1225,130 @@ SERVICES SECTION
   height: 50vh;
   margin: 2rem;
 }
+
+/* 
+  CONTACT
+*/
+
+.contact-content{
+  margin:8rem;
+  margin-bottom: none;
+  
+}
+
+.top{
+  margin-top: 8rem;
+  
+}
+
+.info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.info> .left{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+ 
+}
+.location{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-start; */
+  margin-right:3rem;
+  
+}
+
+.location img{
+  margin-right: 2rem;
+}
+
+.email{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+.email img{
+  margin-right: 2rem;
+}
+
+.phone{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+.phone img{
+  margin-right: 2rem;
+}
+
+.info>.right img{
+  width:40vw;
+}
+
+.bottom{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+}
+.bottom> .left{
+  width:30vw;
+  margin-left: 3rem;
+}
+
+.name-input{
+  margin-bottom: 3rem;
+}
+
+.email-input{
+  margin-bottom: 3rem;
+}
+
+.bottom> .right{
+  margin-left: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.message-input{
+  width:40vw;
+}
+
+.contact-button{
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.button-submit{
+  font-family: "Roboto Mono", Times, serif;
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+  width: fit-content;
+  /* padding: 0.5rem 1rem; */
+  border-radius: 999px;
+  background: var(--bg);
+  color: rgba(63, 73, 69, 1);
+  transition: all ease 350ms;
+  cursor: pointer;
+  font-weight: 600;
+  outline: none;
+  border: 0.08rem solid rgba(63, 73, 69, 1);
+}
+
+.button-submit:hover,
+.button-submit:focus {
+  background: #40635a;
+  border-color:var(--bg) ;
+  color: var(--bg);
+}
+
+
 /* 
   FOOTER
 */
