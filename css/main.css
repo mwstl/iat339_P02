@@ -388,27 +388,38 @@ input[type="radio"]:checked::before {
   margin: 1rem 0;
   position: relative;
   width: fit-content;
+  margin-bottom: 3rem;
+ 
 }
 
 .figure-link figcaption {
   position: absolute;
   font-size: 0.75rem;
-  padding: 0.5rem;
+  padding: 0.3rem;
   width: 100%;
   text-align: center;
+  
+}
+
+.figure-link img{
+  transform: scale(1);
+  transition: transform 1s;
+  width: 100%;
+
 }
 
 .image-link {
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   transition: all ease 200ms;
-  border: 1.5px solid var(--dark-green);
+  /* border: 1.5px solid var(--dark-green); */
   transform-origin: center;
+
 }
 
-.image-link:hover,
+.image-link:hover ,
 .image-link:focus {
   transform: scale(1.02);
-  border-color: var(--text);
+  /* border-color: var(--text); */
 }
 
 /* 
@@ -960,6 +971,11 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-left: 16vw;
   bottom: 3vh;
 }
+.description{
+  position: absolute;
+  margin-left: 16.5vw;
+  bottom: 1vh;
+}
 
 /* 
 SERVICES SECTION
@@ -1437,6 +1453,62 @@ SERVICES SECTION
   border-color:var(--bg) ;
   color: var(--bg);
 }
+
+/* 
+  SERVICE-2 
+*/
+
+.about-content{
+  margin:10rem;
+  padding-top: 3rem;
+ 
+}
+
+.about-top{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.about-left h3 {
+  margin-bottom: 5rem;
+  font-size:32px;
+}
+
+.about-left p{
+  margin-bottom: 5rem;
+  padding-right: 6rem;
+  
+}
+
+.about-right img{
+  mix-blend-mode: color-burn;
+}
+
+.about-bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.about-bottom h4{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  font-weight: 400;
+  font-size:25px;
+  width:30vw;
+}
+
+.about-bottom img{
+  margin-top: 5rem;
+  width: 50vw;
+}
+
 
 
 /* 
