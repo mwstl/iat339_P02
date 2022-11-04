@@ -8,21 +8,22 @@
 
     <title>Service 1 | Evolve</title>
 
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="nav-header">
         <nav class="nav-menu">
-            <a href="homepage.html" class="header-company-title">Evolve</a>
-            <div class="nav-items">
-                <a href="homepage.html">Home</a>
+            <a href="#" class="header-company-title">Evolve</a>
+            <div class="nav-items desktop">
+                <a href="../index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="portfolio.html">Projects</a>
                 <a href="contact.html">Contact</a>
             </div>
-            <a href="booking.html" class="cta-primary">Let's meet</a>
+            <a href="booking.html" class="cta-primary desktop">Let's meet</a>
+            <div class="temp-menu-toggle mobile"></div>
         </nav>
     </header>
 
@@ -40,7 +41,7 @@
                     <p class="form-text">I'm</p>
                     <input type="text" class="booking-form-short-input" name="your-name" data-name="your name"
                         placeholder="your name" id="your-name">
-                    <p class="form-text">, from</p>
+                    <p class="form-text">from</p>
                     <input type="text" class="booking-form-short-input" name="company" data-name="company"
                         placeholder="company" id="company">
                 </div>
@@ -50,12 +51,12 @@
                         placeholder="project idea" id="project-idea">
                     <p class="form-text">project idea.</p>
                 </div>
-                
+
                 <!-- <textarea class="" name="project-pitch" id="project-pitch"
                     placeholder="(optional) tell us about your project!"></textarea> -->
-                    <input type="text" class="booking-line-3" name="project-pitch" id="project-pitch"
+                <input type="text" class="booking-line-3" name="project-pitch" id="project-pitch"
                     placeholder="(optional) tell us about your project!">
-                
+
                 <div class="booking-line-4">
                     <p class="form-text">Our budget for this project is</p>
                     <input type="text" class="booking-form-short-input" name="project-budjet" data-name="project budjet"

@@ -6,54 +6,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 
-    <title>About | Evolve</title>
+    <title>Contact | Evolve</title>
 
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="nav-header">
         <nav class="nav-menu">
-            <a href="homepage.html" class="header-company-title">Evolve</a>
-            <div class="nav-items">
-                <a href="homepage.html">Home</a>
+            <a href="#" class="header-company-title">Evolve</a>
+            <div class="nav-items desktop">
+                <a href="../index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="portfolio.html">Projects</a>
                 <a href="contact.html">Contact</a>
             </div>
-            <a href="booking.html" class="cta-primary">Let's meet</a>
+            <a href="booking.html" class="cta-primary desktop">Let's meet</a>
+            <div class="temp-menu-toggle mobile"></div>
         </nav>
     </header>
 
-   
-        <div class="about-content">
-            <div class="about-top">
-                <div class="about-left">
-                    <h3>Envisioning the future</h3>
-                        <p>We utilize AI and generative design to create an interesting twist on modern architecture. Our creative processes 
-                            imagine what materials will be available in the future, how they are processed, sustainability, 
-                            and the possible technological advancements that could occur.</p>
-                        <p>
-                            We offer a variety of services, including architectural drawings, 3D renderings, and fully detailed design packages.
+    <div class="contact-content">
+        <div class="contact-title">
+            <h1>CONTACT US</h1>
+        </div>
+
+        <div class="top">
+            <div class="info">
+                <div class="left">
+                    <div class="location">
+                        <img src="../img/icon5.png" width="20px" height="20px" alt="this is location icon">
+                        <p class="info">
+                            13450 102 Ave Unit 250,
+                            Surrey, BC V3T 0A3
                         </p>
+                    </div>
+                    <div class="email">
+                        <img src="../img/icon6.png" width="20px" height="20px" alt="this is email icon">
+                        <p class=" contact-email">contact@evolve.xyz</p>
+                    </div>
+                    <div class="phone">
+                        <img src="../img/icon7.png" width="20px" height="20px" alt="this is phone icon">
+                        <p class="phone-number">+1 (778) 123 5678</p>
+                    </div>
                 </div>
-                <div class="about-right">
-                    <img src="img/9.png" alt="this is a building image">
-                </div>
-            </div>
-            <div class="about-bottom">
-                <div>
-                <h4>We've worked on projects
-                    around the world</h4>
-                </div>
-                <div>
-                    <img src="img/10.png" alt="this is our project's location">
+                <div class="right">
+                    <img src="../img/8.png" alt="this is location map">
                 </div>
             </div>
         </div>
-    
-    
+
+        <div class="contact-cta">
+            <h3>Interested in working on a project?</h3>
+            <button class="cta">Let's meet</button>
+
+            <h3>or, have an inquiry/question?</h3>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <div class="name-input">
+                    <input type="text" class="information-content" name="name" data-name="name" placeholder="NAME"
+                        id="name">
+                </div>
+                <div class="email-input">
+                    <input type="text" class="information-content" name="email" data-name="email" placeholder="EMAIL"
+                        id="email">
+                </div>
+                <div class="phone-input">
+                    <input type="text" class="information-content" name="phone" data-name="phone" placeholder="PHONE"
+                        id="phone">
+                </div>
+            </div>
+            <div class="right">
+                <div class="message-input">
+                    <input type="text" class="information-content" name="message" data-name="message"
+                        placeholder="MESSAGE" id="message">
+                </div>
+            </div>
+        </div>
+        <div class="contact-button">
+            <button class="button-submit">Submit</button>
+        </div>
+    </div>
 
     <footer>
 
@@ -114,7 +149,6 @@
                 </a>
             </div>
         </div>
-        
     </footer>
 </body>
 
