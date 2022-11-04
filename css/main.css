@@ -829,30 +829,26 @@ input[type="number"]::-webkit-outer-spin-button {
   transform-origin: bottom left;
 }
 
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  height: 7rem;
-  z-index: 10;
-  background: linear-gradient(
-    0deg,
-    rgba(25, 28, 27, 0) 0%,
-    rgba(25, 28, 27, 0.25) 100%
-  );
-  backdrop-filter: blur(10px);
-}
-
 .mobile-nav-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: row;
+  align-items: flex-end;
+  padding: 5%;
+  flex-direction: column;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  visibility: hidden;
+  background-color: var(--bg);
+}
+
+.menu-open header nav .mobile-nav-items {
+  visibility: visible;
+  z-index: 50;
 }
 
 .menu-button-container {
@@ -992,13 +988,32 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .temporary-content {
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 60;
+  visibility: hidden;
+  background: linear-gradient(
+    0deg,
+    rgba(25, 28, 27, 0) 0%,
+    rgba(25, 28, 27, 0.25) 100%
+  );
+  backdrop-filter: blur(10px);
 }
 .temporary-content h1 {
   font-size: 2rem;
+}
+.booking-cta {
+  cursor: pointer;
+}
+
+.booking-open .temporary-content {
+  visibility: visible;
 }
 
 /* 
@@ -1073,8 +1088,11 @@ SERVICES SECTION
 
 .service-content {
   display: flex;
-  padding: 8vh 8vw 8vh 16vw;
+  flex-direction: column;
+  align-items: center;
+  padding: 8vh 8vw;
   justify-content: space-between;
+  gap: 5rem;
 }
 
 .service-info {
@@ -1286,12 +1304,11 @@ SERVICES SECTION
   background-color: var(--bg);
   border: 1px solid var(--mid-green);
   color: var(--mid-green);
-  height: 115px;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  width: 100px;
   width: fit-content;
+  padding: 3rem 1rem;
 }
 
 .button-seemore:hover,
@@ -1342,7 +1359,7 @@ SERVICE-2
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width:13.5vw;
+  width: 13.5vw;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-top: 7rem;
@@ -1398,7 +1415,6 @@ SERVICE-2
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 0.1rem solid var(--dark-green);
-  width: 100%;
 }
 
 .summary h6 {
@@ -1788,6 +1804,7 @@ CONTACT
   justify-content: center;
   align-items: center;
   margin-top: 10rem;
+  gap: 5rem;
 }
 
 .about-bottom h4 {
@@ -1802,7 +1819,7 @@ CONTACT
 }
 
 .about-bottom img {
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   width: 50vw;
 }
 
@@ -1945,11 +1962,19 @@ footer {
   position: relative;
 }
 
+.temp-content-styleguide {
+  visibility: visible;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+
 .close-popup {
   position: absolute;
   right: 5%;
   top: 5%;
   cursor: pointer;
+  z-index: 10;
 }
 
 .booking-form {
@@ -2000,6 +2025,8 @@ footer {
   height: 1.5rem;
   border-top: 5px solid var(--text);
   border-bottom: 5px solid var(--text);
+  cursor: pointer;
+  z-index: 100;
 }
 
 .mobile {
@@ -2014,25 +2041,6 @@ footer {
 
 @media screen and (max-width: 576px) {
   /* Mobile */
-  /* .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-  }
-
-  .menu {
-    position: absolute;
-    top: 0;
-    margin-top: 50px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  } */
-
   #hero {
     display: flex;
     flex-direction: column;
@@ -2089,16 +2097,6 @@ footer {
   .about-right img {
     max-width: 100%;
     height: 25vh;
-  }
-
-  .about-bottom {
-    width: 100%;
-    padding: 0 5%;
-  }
-
-  .about-bottom h4,
-  .about-bottom img {
-    width: 100%;
   }
 
   .temporary-content {
@@ -2303,10 +2301,30 @@ footer {
     width: 100%;
     margin: 0;
   }
+
+  .snapping-sections {
+    scroll-behavior: unset;
+    scroll-snap-type: none;
+  }
 }
 
 @media screen and (max-width: 992px) {
   /* Small Desktop */
+
+  .about-right img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+  .about-bottom {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .about-bottom h4,
+  .about-bottom img {
+    width: 100%;
+  }
 
   footer {
     padding: 0 5%;
@@ -2445,6 +2463,23 @@ footer {
   .mobile {
     display: block;
   }
+  .mobile-nav-items.mobile {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10% 5%;
+    flex-direction: column;
+    list-style-type: none;
+    visibility: hidden;
+    background-color: var(--bg);
+  }
+  .mobile-nav-items.mobile > * {
+    position: relative;
+    gap: 2rem;
+  }
   .desktop {
     display: none;
   }
@@ -2455,5 +2490,8 @@ footer {
 
   .service-content {
     padding: 10%;
+  }
+  .footer-other-links {
+    transform: scale(0.75);
   }
 }

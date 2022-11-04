@@ -9,27 +9,78 @@
     <title>Service 2 | Evolve</title>
 
     <link href="../css/main.css" rel="stylesheet">
+    <script src="../js/scripts.js"></script>
 </head>
 
 <body>
 
     <header class="nav-header">
         <nav class="nav-menu">
-            <a href="#" class="header-company-title">Evolve</a>
+            <a href="../index.html" class="header-company-title">Evolve</a>
             <div class="nav-items desktop">
                 <a href="../index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="portfolio.html">Projects</a>
                 <a href="contact.html">Contact</a>
             </div>
-            <a href="booking.html" class="cta-primary desktop">Let's meet</a>
-            <div class="temp-menu-toggle mobile"></div>
+            <div class="cta-primary desktop booking-cta" onclick="toggleBooking()">Let's meet</div>
+            <div class="temp-menu-toggle mobile" onclick="toggleMenu()"></div>
+
+            <div class="mobile-nav-items mobile">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <div class="cta-primary booking-cta" onclick="toggleBooking()">Let's meet</div>
+            </div>
         </nav>
     </header>
 
+    <div class="temporary-content">
+        <div class="booking-popup">
+            <div class="close-popup" onclick="toggleBooking()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                </svg>
+            </div>
+            <form id="book-service-form" name="book-service-form" class="booking-form">
+                <h5 class="">Book A Meeting</h5>
+                <div class="booking-line-1">
+                    <p class="form-text">I'm</p>
+                    <input type="text" class="booking-form-short-input" name="your-name" data-name="your name"
+                        placeholder="your name" id="your-name">
+                    <p class="form-text">from</p>
+                    <input type="text" class="booking-form-short-input" name="company" data-name="company"
+                        placeholder="company" id="company">
+                </div>
+                <div class="booking-line-2">
+                    <p class="form-text">I'd like to discuss a</p>
+                    <input type="text" class="booking-form-short-input" name="project-idea" data-name="project idea"
+                        placeholder="project idea" id="project-idea">
+                    <p class="form-text">project idea.</p>
+                </div>
+                <input type="text" class="booking-line-3" name="project-pitch" id="project-pitch"
+                    placeholder="(optional) tell us about your project!">
+
+                <div class="booking-line-4">
+                    <p class="form-text">Our budget for this project is</p>
+                    <input type="text" class="booking-form-short-input" name="project-budjet" data-name="project budjet"
+                        placeholder="$000,000,000" id="project-budjet">
+                </div>
+                <div class="booking-line-5">
+                    <p class="form-text">You can find me at</p>
+                    <input type="text" class="booking-form-short-input" name="email" data-name="email"
+                        placeholder="email" id="email">
+                </div>
+            </form>
+            <button class="booking-submit">Submit</button>
+        </div>
+    </div>
+
     <div class="service2">
         <div class="title">
-            <h1>Project Name 2</h1>
+            <h1>Rec Concept</h1>
         </div>
         <div class="service-img">
             <div class="left">
@@ -54,7 +105,8 @@
             <div class="service-summary-info">
                 <div class="top">
                     <h6>CLIENT REQUEST</h6>
-                    <p>Our client contacted us with the idea of...</p>
+                    <p>Our client contacted us with the idea of creating a space that was capable of hosting the 2020
+                        Olympics.</p>
                 </div>
                 <div class="bottom">
                     <h6>OUR TASK</h6>
@@ -77,11 +129,11 @@
                         <h6>PROBLEM</h6>
                     </div>
                     <ol>
-                        <li>GEOGRAPHA
-                            <p>The land is located in an area prone to...</p>
+                        <li>GEOGRAPHY
+                            <p>The land is located in an area known for tsunamis and earthquakes.</p>
                         </li>
                         <li>CLIMATE
-                            <P>The area often recieves.... weather</P>
+                            <P>The area has hot and humid summers and cold winters.</P>
                         </li>
                         <li>LIFESTYLE
                             <p>People travel, walk, bike, commute, and often crowd the streets throughout the day...</p>
@@ -99,7 +151,7 @@
                         </li>
                         <li>CLIMATE
                             <P>Materials were chosen with the capability to expand and contract, while still retaining
-                                flexibility.</P>
+                                flexibility as the weather changes throughout the year.</P>
                         </li>
                         <li>LIFESTYLE
                             <p>Major intersections and traffic areas were taken into account while designing the faces
@@ -121,36 +173,26 @@
             <div class="process-content">
                 <div class="top">
                     <h6>RESEARCH</h6>
-                    <p>We started by analyzing... lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa
-                        mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula
-                        consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
-                        Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh,
-                        at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque
-                        sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus
-                        orci facilisis id.</p>
+                    <p>We started by analyzing the core idea and experience the client wanted to create, we also looked
+                        at previous Olympic facilities and the history and values that the Olympics stood for.</p>
                 </div>
                 <div class="middle">
                     <h6>IDEATION</h6>
                     <p>Next up was to communicate our findings with the client and begin creating our initial
-                        concepts... lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in
-                        hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices
-                        mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo,
-                        non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit
-                        amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum,
-                        vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
+                        concepts. The client chose a mix between a large open arena with the capacity to adapt it for
+                        use into
+                        concerts and other events.</p>
                 </div>
                 <div class="bottom">
-                    <h6>IDEATION</h6>
+                    <h6>REFINING</h6>
                     <p>Then, through repeat feedback, we continually refined our designs to accomodate client requests
-                        while maintaining the core values identified earlier... lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-                        fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis
-                        imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur
-                        pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at
-                        sodales sodales.</p>
+                        while maintaining the core values identified earlier.</p>
                 </div>
             </div>
         </div>
+
+        <h3>Interested?</h3>
+        <div class="cta-primary booking-cta" onclick="toggleBooking()">Let's meet</div>
     </section>
 
 
@@ -188,10 +230,10 @@
 
             <div class="footer-other-links">
                 <div class="footer-links">
-                    <a href="pages/about.html" class="footer-link">About us</a>
-                    <a href="#services" class="footer-link">Services</a>
-                    <a href="pages/portfolio.html" class="footer-link">Portfolio</a>
-                    <a href="pages/styleguide.html" class="footer-link">Styleguide</a>
+                    <a href="about.html" class="footer-link">About us</a>
+                    <a href="../index.html#services" class="footer-link">Services</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="styleguide.html" class="footer-link">Styleguide</a>
                 </div>
                 <img src="https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
                     alt="footer-temporary-image" class="footer-img">

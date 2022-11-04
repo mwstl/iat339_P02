@@ -9,6 +9,7 @@
   <title>P02 - Style Guide Template</title>
 
   <link href="../css/main.css" rel="stylesheet">
+  <script src="../js/scripts.js"></script>
 
   <!--
       Brand: Generative/AI Architecture Design Firm
@@ -441,6 +442,103 @@
 
   </section>
 
+  <section id="booking-meeting" class="element">
+    <h3>Book a meeting</h3>
+
+    <h4 class="space">CSS selector:</h4>
+    <p>.booking-popup, .close-popup, .booking-form, .booking-line-1, .booking-line-2, .booking-line-3,
+      .booking-line-4, .booking-line-5, .booking-submit</p>
+
+    <h4 class="space">Sample code:</h4>
+
+    <pre>
+          <code>
+&lt;div class="booking-popup"&gt;
+  &lt;div class="close-popup" onclick="toggleBooking()"&gt;&lt;/div&gt;
+
+  &lt;form id="book-service-form" name="book-service-form" class="booking-form"&gt;
+    &lt;h5&gt;Book a Meeting&lt;/h5&gt;
+    &lt;div class="booking-line-1"&gt;
+      &lt;p class="form-text"&gt;I'm&lt;/p&gt;
+      &lt;input type="text" class="booking-form-short-input" name="your-name" data-name="your name"
+      placeholder="your name" id="your-name"&gt;
+      &lt;p class="form-text"&gt;from&lt;/p&gt;
+      &lt;input type="text" class="booking-form-short-input" name="company" data-name="company"
+      placeholder="company" id="company"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="booking-line-2"&gt;
+      &lt;p class="form-text"&gt;I'd like to discuss a&lt;/p&gt;
+      &lt;input type="text" class="booking-form-short-input" name="project-idea" data-name="project idea"
+      placeholder="project idea" id="project-idea"&gt;
+      &lt;p class="form-text"&gt;project idea.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;input type="text" class="booking-line-3" name="project-pitch" id="project-pitch"
+    placeholder="(optional) tell us about your project!"&gt;
+
+    &lt;div class="booking-line-4"&gt;
+      &lt;p class="form-text"&gt;Our budget for this project is&lt;/p&gt;
+      &lt;input type="text" class="booking-form-short-input" name="project-budjet" data-name="project budjet"
+      placeholder="$000,000,000" id="project-budjet"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="booking-line-5"&gt;
+      &lt;p class="form-text"&gt;You can find me at&lt;/p&gt;
+      &lt;input type="text" class="booking-form-short-input" name="email" data-name="email"
+      placeholder="email" id="email"&gt;
+    &lt;/div&gt;
+
+    &lt;button class="booking-submit"&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+          </code>
+        </pre>
+
+    <div class="temporary-content temp-content-styleguide">
+      <div class="booking-popup">
+        <div class="close-popup">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+          </svg>
+        </div>
+        <form id="book-service-form" name="book-service-form" class="booking-form">
+          <h5 class="">Book A Meeting</h5>
+          <div class="booking-line-1">
+            <p class="form-text">I'm</p>
+            <input type="text" class="booking-form-short-input" name="your-name" data-name="your name"
+              placeholder="your name" id="your-name">
+            <p class="form-text">from</p>
+            <input type="text" class="booking-form-short-input" name="company" data-name="company" placeholder="company"
+              id="company">
+          </div>
+          <div class="booking-line-2">
+            <p class="form-text">I'd like to discuss a</p>
+            <input type="text" class="booking-form-short-input" name="project-idea" data-name="project idea"
+              placeholder="project idea" id="project-idea">
+            <p class="form-text">project idea.</p>
+          </div>
+          <input type="text" class="booking-line-3" name="project-pitch" id="project-pitch"
+            placeholder="(optional) tell us about your project!">
+
+          <div class="booking-line-4">
+            <p class="form-text">Our budget for this project is</p>
+            <input type="text" class="booking-form-short-input" name="project-budjet" data-name="project budjet"
+              placeholder="$000,000,000" id="project-budjet">
+          </div>
+          <div class="booking-line-5">
+            <p class="form-text">You can find me at</p>
+            <input type="text" class="booking-form-short-input" name="email" data-name="email" placeholder="email"
+              id="email">
+          </div>
+        </form>
+        <button class="booking-submit">Submit</button>
+      </div>
+    </div>
+
+  </section>
+
   <section id="footer" class="element">
     <h3>Footer</h3>
 
@@ -454,7 +552,53 @@
           <code>
 &lt;footer&gt;
   &lt;div class="footer-main-content"&gt;
-    &lt;div for="card-num" class="payment-card-number"&gt;
+    &lt;div class="footer-company-name"&gt;
+      &lt;p class="company"&gt;Evolve&lt;/p&gt;
+      &lt;p class="company-slogan"&gt;Envision the future&lt;/p&gt;
+    &lt;div&gt;
+    &lt;div class="footer-company-details"&gt;
+      &lt;div class="footer-detail footer-email"&gt;
+        &lt;p class="footer-detail-name"&gt;Email&lt;/p&gt;
+        &lt;p class="footer-detail-subtext"&gt;Get in touch&lt;/p&gt;
+        &lt;p class="footer-detail-info contact-email"&gt;contact@evolve.xyz&lt;/p&gt;
+      &lt;div&gt;
+      &lt;div class="footer-detail footer-phone"&gt;
+        &lt;p class="footer-detail-name"&gt;Phone&lt;/p&gt;
+        &lt;p class="footer-detail-subtext"&gt;Call or text&lt;/p&gt;
+        &lt;p class="footer-detail-info"&gt;+1 (778) 123 5678&lt;/p&gt;
+      &lt;div&gt;
+      &lt;div class="footer-detail footer-location"&gt;
+        &lt;p class="footer-detail-name"&gt;Location&lt;/p&gt;
+        &lt;p class="footer-detail-subtext"&gt;Find us&lt;/p&gt;
+        &lt;p class="footer-detail-info"&gt;13450 102 Ave Unit 250,
+        Surrey, BC V3T 0A3&lt;/p&gt;
+      &lt;div&gt;
+    &lt;div&gt;
+
+    &lt;div class="footer-other-links"&gt;
+      &lt;div class="footer-links"&gt;
+      &lt;a href="about.html" class="footer-link"&gt;About us&lt;/a&gt;
+      &lt;a href="../index.html#services" class="footer-link"&gt;Services&lt;/a&gt;
+      &lt;a href="portfolio.html" class="footer-link"&gt;Portfolio&lt;/a&gt;
+      &lt;a href="portfolio.html" class="footer-link"&gt;Styleguide&lt;/a&gt;
+      &lt;img src="https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="footer-temporary-image" class="footer-img"&gt;
+    &lt;div&gt;
+  &lt;div&gt;
+
+  &lt;div class="footer-bottom"&gt;
+    &lt;p class="copyright"&gt;&copy; EVOLVE 2022. All rights reserved.&lt;/p&gt;
+    &lt;div class="footer-bottom"&gt;
+      &lt;a href="https://www.linkedin.com/" class="footer-social in"&gt;
+        &lt;img src="../img/icon1.png" alt="linkedin" class="footer-img" width="15" height="15"&gt;
+      &lt;a href="https://www.facebook.com/" class="footer-social fb"&gt;
+        &lt;img src="../img/icon2.png" alt="linkedin" class="footer-img" width="15" height="15"&gt;
+      &lt;a href="https://www.twitter.com/" class="footer-social tw"&gt;
+        &lt;img src="../img/icon3.png" alt="linkedin" class="footer-img" width="15" height="15"&gt;
+      &lt;a href="https://www.instagram.com/" class="footer-social ig"&gt;
+        &lt;img src="../img/icon4.png" alt="linkedin" class="footer-img" width="15" height="15"&gt;
+      &lt;/a&gt;
+    &lt;div&gt;
+  &lt;div&gt;
     
 &lt;/footer&gt;
           </code>
@@ -491,10 +635,10 @@
 
         <div class="footer-other-links">
           <div class="footer-links">
-            <a href="pages/about.html" class="footer-link">About us</a>
-            <a href="#services" class="footer-link">Services</a>
-            <a href="pages/portfolio.html" class="footer-link">Portfolio</a>
-            <a href="pages/styleguide.html" class="footer-link">Styleguide</a>
+            <a href="about.html" class="footer-link">About us</a>
+            <a href="../index.html#services" class="footer-link">Services</a>
+            <a href="portfolio.html" class="footer-link">Portfolio</a>
+            <a href="styleguide.html" class="footer-link">Styleguide</a>
           </div>
           <img
             src="https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
@@ -529,11 +673,11 @@
       <h3>Fonts</h3>
       <ul>
         <li>
-          Google. (n.d.). Montserrat. Google fonts: Montserrat. Retrieved November 4, 2022, from <a
+          Google. (n.d.). <em>Montserrat.</em> Google fonts: Montserrat. Retrieved November 4, 2022, from <a
             href="https://fonts.google.com/specimen/Montserrat">https://fonts.google.com/specimen/Montserrat</a>
         </li>
         <li>
-          Google. (n.d.). Roboto Mono. Google fonts: Roboto Mono. Retrieved November 4, 2022, from <a
+          Google. (n.d.). <em></em>Roboto Mono.</em> Google fonts: Roboto Mono. Retrieved November 4, 2022, from <a
             href="https://fonts.google.com/specimen/Roboto+Mono">https://fonts.google.com/specimen/Roboto+Mono</a>
         </li>
       </ul>
@@ -541,23 +685,23 @@
       <h3>Images</h3>
       <ul>
         <li>
-          Adnan, I. H. (2017). Twin Towers, Malaysia. Unsplash. Unsplash. Retrieved from <a
+          Adnan, I. H. (2017). <em>Twin Towers, Malaysia.</em> Unsplash. Unsplash. Retrieved from <a
             href="https://unsplash.com/photos/1e71PSox7m8">https://unsplash.com/photos/1e71PSox7m8</a>.
         </li>
         <li>
-          Boss, M. (2019). Blue and grey concrete building photo. Unsplash. Unsplash. Retrieved from <a
+          Boss, M. (2019). <em>and grey concrete building photo.</em> Unsplash. Unsplash. Retrieved from <a
             href="https://https://unsplash.com/photos/YoDlrVtyl6o">https://https://unsplash.com/photos/YoDlrVtyl6o</a>.
         </li>
         <li>
-          Flipboard. (2018). Grey architectural building. Unsplash. Unsplash. Retrieved from <a
+          Flipboard. (2018). <em>Grey architectural building.</em> Unsplash. Unsplash. Retrieved from <a
             href="https://unsplash.com/photos/h5H5UyXBLBQ">https://unsplash.com/photos/h5H5UyXBLBQ</a>.
         </li>
         <li>
-          Oliva, R. (2017). White building under stars. Unsplash. Unsplash. Retrieved from <a
+          Oliva, R. (2017). <em>White building under stars.</em> Unsplash. Unsplash. Retrieved from <a
             href="https://unsplash.com/photos/C5DLhUkEWfM">https://unsplash.com/photos/C5DLhUkEWfM</a>.
         </li>
         <li>
-          Yudaev, S. (2019). Grey spiral building photo. Unsplash. Unsplash. Retrieved from <a
+          Yudaev, S. (2019). <em>Grey spiral building photo.</em> Unsplash. Unsplash. Retrieved from <a
             href="https://unsplash.com/photos/FOYsU4uQqqM">https://unsplash.com/photos/FOYsU4uQqqM</a>.
         </li>
       </ul>

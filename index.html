@@ -9,9 +9,11 @@
     <title>EVOLVE | Envisioning the future</title>
 
     <link href="css/main.css" rel="stylesheet">
+    <script src="js/scripts.js
+    "></script>
 </head>
 
-<body>
+<body class="">
 
     <header class="nav-header">
         <nav class="nav-menu">
@@ -22,26 +24,60 @@
                 <a href="pages/portfolio.html">Projects</a>
                 <a href="pages/contact.html">Contact</a>
             </div>
-            <a href="pages/booking.html" class="cta-primary desktop">Let's meet</a>
-            <div class="temp-menu-toggle mobile"></div>
-        </nav>
+            <div class="cta-primary desktop booking-cta" onclick="toggleBooking()">Let's meet</div>
+            <div class="temp-menu-toggle mobile" onclick="toggleMenu()"></div>
 
-        <!-- <div class="mobile-nav mobile">
-            <a href="#" class="header-company-title">Evolve</a>
-            <input id="menu-toggle" type="checkbox" />
-            <label class='menu-button-container' for="menu-toggle">
-                <div class='menu-button'></div>
-            </label>
-
-            <div class="mobile-nav-items">
+            <div class="mobile-nav-items mobile">
                 <a href="index.html">Home</a>
                 <a href="pages/about.html">About</a>
                 <a href="pages/portfolio.html">Projects</a>
                 <a href="pages/contact.html">Contact</a>
-                <a href="pages/booking.html" class="cta-primary">Let's meet</a>
+                <div class="cta-primary desktop booking-cta" onclick="toggleBooking()">Let's meet</div>
             </div>
-        </div> -->
+        </nav>
     </header>
+
+    <div class="temporary-content">
+        <div class="booking-popup">
+            <div class="close-popup" onclick="toggleBooking()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                </svg>
+            </div>
+            <form id="book-service-form" name="book-service-form" class="booking-form">
+                <h5 class="">Book A Meeting</h5>
+                <div class="booking-line-1">
+                    <p class="form-text">I'm</p>
+                    <input type="text" class="booking-form-short-input" name="your-name" data-name="your name"
+                        placeholder="your name" id="your-name">
+                    <p class="form-text">from</p>
+                    <input type="text" class="booking-form-short-input" name="company" data-name="company"
+                        placeholder="company" id="company">
+                </div>
+                <div class="booking-line-2">
+                    <p class="form-text">I'd like to discuss a</p>
+                    <input type="text" class="booking-form-short-input" name="project-idea" data-name="project idea"
+                        placeholder="project idea" id="project-idea">
+                    <p class="form-text">project idea.</p>
+                </div>
+                <input type="text" class="booking-line-3" name="project-pitch" id="project-pitch"
+                    placeholder="(optional) tell us about your project!">
+
+                <div class="booking-line-4">
+                    <p class="form-text">Our budget for this project is</p>
+                    <input type="text" class="booking-form-short-input" name="project-budjet" data-name="project budjet"
+                        placeholder="$000,000,000" id="project-budjet">
+                </div>
+                <div class="booking-line-5">
+                    <p class="form-text">You can find me at</p>
+                    <input type="text" class="booking-form-short-input" name="email" data-name="email"
+                        placeholder="email" id="email">
+                </div>
+            </form>
+            <button class="booking-submit">Submit</button>
+        </div>
+    </div>
 
     <div class="content">
 
@@ -64,7 +100,7 @@
                         convenience. Clients are primarily residential building owners or those looking to build
                         sustainable living spaces within communities.
                     </p>
-                    <a href="pages/service-2.html" class="cta-secondary">Learn more</a>
+                    <a href="pages/service-1.html" class="cta-secondary">Learn more</a>
                 </div>
                 <div class="service-img res-img"></div>
 
@@ -86,7 +122,7 @@
                         offices, retail buildings, and hotels in New York City and
                         London, as well as Hong Kong coming soon.
                     </p>
-                    <a href="service-1.html" class="cta-secondary">Learn more</a>
+                    <a href="pages/service-1.html" class="cta-secondary">Learn more</a>
                 </div>
                 <div class="service-img comm-img"></div>
 
@@ -109,7 +145,7 @@
                         perfect for fabricators, manufacturers and other companies making
                         anything from clothing to electronics.
                     </p>
-                    <a href="service-1.html" class="cta-secondary">Learn more</a>
+                    <a href="pages/service-2.html" class="cta-secondary">Learn more</a>
                 </div>
                 <div class="service-img ind-img"></div>
 
@@ -128,7 +164,7 @@
                     <h3 class="project-type">Experimental</h3>
                     <p>Shall we push the boundaries of design together?
                     </p>
-                    <a href="service-1.html" class="cta-secondary">Learn more</a>
+                    <a href="pages/service-2.html" class="cta-secondary">Learn more</a>
                 </div>
                 <div class="service-img exp-img"></div>
 
@@ -170,7 +206,8 @@
                         <div class="product-content">
                             <div class="product-name">Residential</div>
                             <div class="product-price">$2000-$10000</div>
-                            <a href="" class="product-link cta-secondary">Let's meet</a>
+                            <div class="cta-secondary product-link booking-cta" onclick="toggleBooking()">Let's meet
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -184,7 +221,8 @@
                         <div class="product-content">
                             <div class="product-name">Commercial</div>
                             <div class="product-price">$2000-$10000</div>
-                            <a href="" class="product-link cta-secondary">Let's meet</a>
+                            <div class="cta-secondary product-link booking-cta" onclick="toggleBooking()">Let's meet
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -198,7 +236,8 @@
                         <div class="product-content">
                             <div class="product-name">Industrial</div>
                             <div class="product-price">$2000-$10000</div>
-                            <a href="" class="product-link cta-secondary">Let's meet</a>
+                            <div class="cta-secondary product-link booking-cta" onclick="toggleBooking()">Let's meet
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -212,7 +251,8 @@
                         <div class="product-content">
                             <div class="product-name">Experimental</div>
                             <div class="product-price">$2000-$10000</div>
-                            <a href="" class="product-link cta-secondary">Let's meet</a>
+                            <div class="cta-secondary product-link booking-cta" onclick="toggleBooking()">Let's meet
+                            </div>
                         </div>
                     </div>
                 </div>
