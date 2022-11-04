@@ -8,23 +8,75 @@
 
     <title>Contact | Evolve</title>
 
-    <link href="css/main.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <script src="../js/scripts.js"></script>
 </head>
 
 <body>
 
     <header class="nav-header">
         <nav class="nav-menu">
-            <a href="homepage.html" class="header-company-title">Evolve</a>
-            <div class="nav-items">
-                <a href="homepage.html">Home</a>
+            <a href="../index.html" class="header-company-title">Evolve</a>
+            <div class="nav-items desktop">
+                <a href="../index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="portfolio.html">Projects</a>
                 <a href="contact.html">Contact</a>
             </div>
-            <a href="booking.html" class="cta-primary">Let's meet</a>
+            <div class="cta-primary desktop booking-cta" onclick="toggleBooking()">Let's meet</div>
+            <div class="temp-menu-toggle mobile" onclick="toggleMenu()"></div>
+
+            <div class="mobile-nav-items mobile">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <div class="cta-primary booking-cta" onclick="toggleBooking()">Let's meet</div>
+            </div>
         </nav>
     </header>
+
+    <div class="temporary-content">
+        <div class="booking-popup">
+            <div class="close-popup" onclick="toggleBooking()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                </svg>
+            </div>
+            <form id="book-service-form" name="book-service-form" class="booking-form">
+                <h5 class="">Book A Meeting</h5>
+                <div class="booking-line-1">
+                    <p class="form-text">I'm</p>
+                    <input type="text" class="booking-form-short-input" name="your-name" data-name="your name"
+                        placeholder="your name" id="your-name">
+                    <p class="form-text">from</p>
+                    <input type="text" class="booking-form-short-input" name="company" data-name="company"
+                        placeholder="company" id="company">
+                </div>
+                <div class="booking-line-2">
+                    <p class="form-text">I'd like to discuss a</p>
+                    <input type="text" class="booking-form-short-input" name="project-idea" data-name="project idea"
+                        placeholder="project idea" id="project-idea">
+                    <p class="form-text">project idea.</p>
+                </div>
+                <input type="text" class="booking-line-3" name="project-pitch" id="project-pitch"
+                    placeholder="(optional) tell us about your project!">
+
+                <div class="booking-line-4">
+                    <p class="form-text">Our budget for this project is</p>
+                    <input type="text" class="booking-form-short-input" name="project-budjet" data-name="project budjet"
+                        placeholder="$000,000,000" id="project-budjet">
+                </div>
+                <div class="booking-line-5">
+                    <p class="form-text">You can find me at</p>
+                    <input type="text" class="booking-form-short-input" name="email" data-name="email"
+                        placeholder="email" id="email">
+                </div>
+            </form>
+            <button class="booking-submit">Submit</button>
+        </div>
+    </div>
 
     <div class="contact-content">
         <div class="contact-title">
@@ -35,40 +87,46 @@
             <div class="info">
                 <div class="left">
                     <div class="location">
-                        <img src="img/icon5.png" width="20px" height="20px" alt="this is location icon">
+                        <img src="../img/icon5.png" width="20px" height="20px" alt="this is location icon">
                         <p class="info">
                             13450 102 Ave Unit 250,
                             Surrey, BC V3T 0A3
                         </p>
                     </div>
                     <div class="email">
-                        <img src="img/icon6.png" width="20px" height="20px" alt="this is email icon">
+                        <img src="../img/icon6.png" width="20px" height="20px" alt="this is email icon">
                         <p class=" contact-email">contact@evolve.xyz</p>
                     </div>
                     <div class="phone">
-                        <img src="img/icon7.png" width="20px" height="20px" alt="this is phone icon">
+                        <img src="../img/icon7.png" width="20px" height="20px" alt="this is phone icon">
                         <p class="phone-number">+1 (778) 123 5678</p>
                     </div>
                 </div>
                 <div class="right">
-                    <img src="img/8.png" alt="this is location map" >
+                    <img src="../img/8.png" alt="this is location map">
                 </div>
             </div>
+        </div>
 
+        <div class="contact-cta">
+            <h3>Interested in working on a project?</h3>
+            <div class="cta-primary booking-cta" onclick="toggleBooking()">Let's meet</div>
+
+            <h3>or, have an inquiry/question?</h3>
         </div>
         <div class="bottom">
             <div class="left">
                 <div class="name-input">
-                     <input type="text" class="information-content" name="name" data-name="name"
-                        placeholder="NAME" id="name">
+                    <input type="text" class="information-content" name="name" data-name="name" placeholder="NAME"
+                        id="name">
                 </div>
                 <div class="email-input">
-                    <input type="text" class="information-content" name="email" data-name="email"
-                        placeholder="EMAIL" id="email">
+                    <input type="text" class="information-content" name="email" data-name="email" placeholder="EMAIL"
+                        id="email">
                 </div>
                 <div class="phone-input">
-                    <input type="text" class="information-content" name="phone" data-name="phone"
-                    placeholder="PHONE" id="phone">
+                    <input type="text" class="information-content" name="phone" data-name="phone" placeholder="PHONE"
+                        id="phone">
                 </div>
             </div>
             <div class="right">
@@ -116,8 +174,9 @@
             <div class="footer-other-links">
                 <div class="footer-links">
                     <a href="about.html" class="footer-link">About us</a>
-                    <a href="#services" class="footer-link">Services</a>
+                    <a href="../index.html#services" class="footer-link">Services</a>
                     <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="styleguide.html" class="footer-link">Styleguide</a>
                 </div>
                 <img src="https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
                     alt="footer-temporary-image" class="footer-img">

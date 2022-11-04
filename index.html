@@ -1,709 +1,336 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="snapping-sections">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d035d37c08.js" crossorigin="anonymous"></script>
+    <title>EVOLVE | Envisioning the future</title>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>P02 - Style Guide Template</title>
-
-  <link href="css/main.css" rel="stylesheet">
-
-  <!--
-      Brand: Generative/AI Architecture Design Firm
-                focused on sustainability
-
-      Branding Ideas
-      The company creates futuristic envisionings of buildings and architecture, similar to Zaha Hadid Architecture. They offer architectural drawings, 3D renderings, and fully detailed design packages.
-      The potential customers are city councils, government, construction companies, and real estate developers. These customers are looking to develop green-cities with buildings that incorporate nature with sustainable material. This company focuses on pushing the boundaries of construction and creating environmentally conscious, sustainable buildings that contribute to a green eco-city. Designs incorporate the natural terrain and adapt to the needs of the community.
-
-      Brand Components
-      Fonts: Roboto Mono, Montserrat, Roboto
-      Colour palettes: dark base/background colour, off-white with neon/vibrant highlights
-      Art direction: minimalist, imagery focused design to showcase design firm products. Utilises interactivity through mouse movements and visual elements. Has vertical and horizontal visual elements to guide the user.
-      Website inspirations: refikanadol.com   i-mad.com   zaha-hadid.com
-    -->
-
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/scripts.js
+    "></script>
 </head>
 
-<body class="template">
+<body class="">
 
-  <header>
-    <h1>P02 - Style Guide Template</h1>
+    <header class="nav-header">
+        <nav class="nav-menu">
+            <a href="#" class="header-company-title">Evolve</a>
+            <div class="nav-items desktop">
+                <a href="index.html">Home</a>
+                <a href="pages/about.html">About</a>
+                <a href="pages/portfolio.html">Projects</a>
+                <a href="pages/contact.html">Contact</a>
+            </div>
+            <div class="cta-primary desktop booking-cta" onclick="toggleBooking()">Let's meet</div>
+            <div class="temp-menu-toggle mobile" onclick="toggleMenu()"></div>
 
-    <p>A template you can use to start building out your own style guides with.</p>
+            <div class="mobile-nav-items mobile">
+                <a href="index.html">Home</a>
+                <a href="pages/about.html">About</a>
+                <a href="pages/portfolio.html">Projects</a>
+                <a href="pages/contact.html">Contact</a>
+                <div class="cta-primary desktop booking-cta" onclick="toggleBooking()">Let's meet</div>
+            </div>
+        </nav>
+    </header>
 
-    <nav class="default-nav">
-      <a href="#interactive_elements">Interactive Elements</a>
-      <a href="#text_elements">Text Elements</a>
-      <a href="#combined_elements">Combined Elements</a>
-      <a href="homepage.html">Product Listing Template</a>
-      <a href="checkout.html">Checkout Template</a>
-      <a href="#citations">Citations</a>
-    </nav>
-  </header>
+    <div class="temporary-content">
+        <div class="booking-popup">
+            <div class="close-popup" onclick="toggleBooking()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                </svg>
+            </div>
+            <form id="book-service-form" name="book-service-form" class="booking-form">
+                <h5 class="">Book A Meeting</h5>
+                <div class="booking-line-1">
+                    <p class="form-text">I'm</p>
+                    <input type="text" class="booking-form-short-input" name="your-name" data-name="your name"
+                        placeholder="your name" id="your-name">
+                    <p class="form-text">from</p>
+                    <input type="text" class="booking-form-short-input" name="company" data-name="company"
+                        placeholder="company" id="company">
+                </div>
+                <div class="booking-line-2">
+                    <p class="form-text">I'd like to discuss a</p>
+                    <input type="text" class="booking-form-short-input" name="project-idea" data-name="project idea"
+                        placeholder="project idea" id="project-idea">
+                    <p class="form-text">project idea.</p>
+                </div>
+                <input type="text" class="booking-line-3" name="project-pitch" id="project-pitch"
+                    placeholder="(optional) tell us about your project!">
 
-
-  <!-- COLORS // -->
-  <section id="colors">
-    <h2>Branding</h2>
-
-    <div class="element">
-      <h3>Brand Identity</h3>
-
-      <h4 class="space">Evolve</h4>
-      <p class="space">
-        Evolve is a company that creates futuristic envisionings of buildings and architecture, similar to <a
-          class="text-link">Zaha Hadid Architecture.</a> They offer architectural drawings, 3D renderings, and fully
-        detailed design packages. Incorporating sci-fi styles, Evolve's work is an interesting twist on modern
-        architecture.
-        Learn how we use creative processes such as imagining what materials will be available in the future and how
-        they might be manufactured, or what sort of technological advancements could occur. Evolve offers a variety
-        of services, including architectural drawings, 3D renderings, and fully detailed design
-        packages.
-      </p>
+                <div class="booking-line-4">
+                    <p class="form-text">Our budget for this project is</p>
+                    <input type="text" class="booking-form-short-input" name="project-budjet" data-name="project budjet"
+                        placeholder="$000,000,000" id="project-budjet">
+                </div>
+                <div class="booking-line-5">
+                    <p class="form-text">You can find me at</p>
+                    <input type="text" class="booking-form-short-input" name="email" data-name="email"
+                        placeholder="email" id="email">
+                </div>
+            </form>
+            <button class="booking-submit">Submit</button>
+        </div>
     </div>
 
-    <section class="element">
-      <h3>Colours</h3>
-      <div class="color-palette">
-        <div class="color c-main">Main<br>#54dcb9</div>
-        <div class="color c-secondary">Secondary<br>#bfc9c3</div>
-        <div class="color c-text">Text<br>#030035</div>
-        <div class="color c-bg">Background<br>#191c1b</div>
-        <div class="color c-error">Error<br>#f7f4ef</div>
-      </div>
-    </section>
+    <div class="content">
 
-    <section class="element">
-      <h3>Fonts</h3>
-      <div class="fonts">
-        <div class="font-example montserrat">
-          Montserrat
-          <div class="font-use">headings and paragraphs</div>
-          <div class="montserrat text-example">ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789</div>
+        <section id="hero" class="section">
+            <h1 class="hero-text">Envisioning the future</h1>
+            <h4 class="description">The perfect design just for you.</h4>
+            <p class="scroll-action">Begin</p>
+        </section>
+
+        <section id="services" class="section">
+            <h2 class="services-intro sticky">
+                We can discuss...
+            </h2>
+
+            <section id="service-1" class="service-content section">
+                <div class="service-info">
+                    <h3 class="project-type">Residential</h3>
+                    <p>
+                        Working with you to create spaces for sustainable living. This means accessibility and
+                        convenience. Clients are primarily residential building owners or those looking to build
+                        sustainable living spaces within communities.
+                    </p>
+                    <a href="pages/service-1.html" class="cta-secondary">Learn more</a>
+                </div>
+                <div class="service-img res-img">
+                    <div class="vertical-spacer"></div>
+                </div>
+    </div>
+
+    <div class="progress-indicator">
+        <div class="services-list">
+            <div class="dot active-dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
         </div>
-        <div class="font-example roboto">
-          Roboto Mono
-          <div class="font-use">subheadings and accents</div>
-          <div class="roboto text-example">ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789</div>
+    </div>
+    </section>
+
+    <section id="service-2" class="service-content section">
+        <div class="service-info">
+            <h3 class="project-type">Commercial</h3>
+            <p>Working with you to craft workable bulidings that are the new landmarks of cities. Projects
+                include
+                offices, retail buildings, and hotels in New York City and
+                London, as well as Hong Kong coming soon.
+            </p>
+            <a href="pages/service-1.html" class="cta-secondary">Learn more</a>
         </div>
-      </div>
-    </section>
-  </section>
-
-  <!-- INTERACTIVE ELEMENTS SECTION // -->
-  <section id="interactive_elements">
-    <h2>Interactive Elements</h2>
-
-
-    <section class="element">
-      <h3>In-text link</h3>
-
-      <h4 class="space">CSS selector:</h4>
-      <p>.text-link</p>
-
-      <h4 class="space">Sample code:</h4>
-      <code>&lt;a href="#" class="text-link"&gt;SFU Homepage&lt;/a&gt;</code>
-
-      <h4 class="space">Rendered element:</h4>
-      <p>Clicking on the following text will lead you to the <a class="text-link" href="https://sfu.ca">SFU
-          Homepage</a>.</p>
-    </section>
-
-
-    <!-- Default Button styling section -->
-    <section class="element">
-
-      <h3>Navigation Link</h3>
-
-      <h4 class="space">CSS selector:</h4>
-      <p>.button-nav</p>
-
-      <h4 class="space">Sample code:</h4>
-      <code>&lt;a href="#" class="button-nav"&gt;Default Button&lt;/a&gt;</code>
-
-      <h4 class="space">Rendered element:</h4>
-      <a class="button-nav" href="#">Default Button</a>
-
-    </section>
-
-
-    <section class="element">
-      <h3>Submit/Reset Buttons</h3>
-
-      <h4 class="space">CSS selector:</h4>
-      <p>.btn</p>
-
-      <h4 class="space">Sample code:</h4>
-      <code>&lt;button type="submit" class="btn" value="Submit"&gt;Submit&lt;/button&gt;</code>
-
-      <h4 class="space">Rendered element:</h4>
-      <!-- Referred to https://www.w3schools.com/tags/att_button_type.asp -->
-      <button class="btn" type="submit" value="Submit">Submit</button>
-      <button class="btn" type="reset" value="Reset">Reset</button>
-    </section>
-
-
-    <section class="element">
-      <h3>Text Input Field with Label</h3>
-
-      <h4 class="space">CSS selector:</h4>
-      <p>.label-field</p>
-
-      <h4 class="space">Sample code:</h4>
-
-      <pre>
-          <code>
-&lt;form action="" class="label-field"&gt;<br>
-  &lt;label for="input-name"&gt;You name&lt;/label&gt;<br>
-  &lt;input type="text" id="input-name" name="input-name"&gt;<br>
-&lt;/form&gt;
-          </code>
-        </pre>
-
-      <h4 class="space">Rendered element:</h4>
-      <!-- Referred to https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
-      <form action="index.html" class="label-field">
-        <label for="input-name">Your name</label>
-        <input class="fix-label-width" type="text" id="input-name" name="input-name">
-      </form>
-    </section>
-
-
-    <section class="element">
-      <h3>Radio Button with Label</h3>
-
-      <h4 class="space">CSS selector:</h4>
-      <p>.radio-form</p>
-
-      <h4 class="space">Sample code:</h4>
-
-      <pre>
-          <code>
-&lt;form action="" class="radio-form"&gt;<br>
-  &lt;input type="radio"  id="opt1" name="options" value="option-1"&gt;<br>
-  &lt;label for="opt1"&gt;Option 1&lt;/label&gt;<br>
-&lt;/form&gt;
-          </code>
-        </pre>
-
-      <!-- Referred to https://www.w3schools.com/tags/att_input_type_radio.asp -->
-      <h4 class="space">Rendered element:</h4>
-      <div class="radio-btn">
-
-        <div class="radio-form">
-          <input type="radio" id="opt1" name="options" value="option-1">
-          <label for="opt1">
-            Option 1
-          </label>
+        <div class="service-img comm-img">
+            <div class="vertical-spacer"></div>
         </div>
 
-        <div class="radio-form">
-          <input type="radio" id="opt2" name="options" value="option-2">
-          <label for="opt2">
-            Option 2
-          </label>
-        </div>
 
-        <div class="radio-form">
-          <input type="radio" id="opt3" name="options" value="option-3">
-          <label for="opt3">
-            Option 3
-          </label>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="element">
-      <h3>Image as a Link</h3>
-
-      <h4 class="space">CSS selector:</h4>
-      <p>.figure-link, .image-link</p>
-
-      <h4 class="space">Sample code:</h4>
-
-      <pre>
-          <code>
-&lt;figure class="figure-link"&gt;<br>
-  &lt;a href="https://www.midjourney.com/home/" target="_blank"&gt;<br>
-  &lt;img class="image-link" src="https://s.mj.run/xTZcXRzOBMU" alt="A Midjourney AI generated image of fantasy elven architecture in space"&gt;&lt;/img&gt;<br>
-  &lt;figcaption&gt;Clicking on the image may lead you somewhere interesting!&lt;/figcaption&gt;<br>
-&lt;/figure&gt;
-          </code>
-        </pre>
-
-      <h4 class="space">Rendered element:</h4>
-      <!-- Referred to knowledge from previous courses -->
-      <figure class="figure-link">
-        <a href="https://www.midjourney.com/home/" target="_blank">
-          <img class=" image-link"
-            src="https://images.unsplash.com/photo-1508062878650-88b52897f298?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
-            alt="A Midjourney AI generated image of fantasy elven architecture in space" height="450">
-        </a>
-        <figcaption>Clicking on the image may lead you somewhere interesting!</figcaption>
-      </figure>
-    </section>
-
-
-  </section>
-  <!-- // INTERACTIVE ELEMENTS SECTION -->
-
-
-
-  <!-- TEXT ELEMENTS SECTION // -->
-  <section id="text_elements">
-    <h2>Text Elements</h2>
-
-    <section class="element">
-      <h3>Headings</h3>
-
-      <h4 class="space">CSS selector:</h4>
-      <p>h1, h2, h3, h4, h5, h6</p>
-
-      <h4 class="space">Sample code:</h4>
-
-      <pre>
-          <code>
-&lt;h1&gt;H1 | Montserrat | 4.5rem&lt;/h1&gt;
-          </code>
-        </pre>
-
-      <h4 class="space">Rendered element:</h4>
-      <p class="space h1">H1 | Montserrat | 4.5rem</p>
-      <h2 class="space">H2 | Montserrat | 2.25rem</h2>
-      <h3 class="space">H3 | Roboto Mono | 1.5rem</h3>
-      <h4 class="space">H4 | Roboto Mono | 1rem</h4>
-      <h5 class="space">H5 | Montserrat | 0.75rem</h5>
-    </section>
-
-    <section class="element">
-      <h3>Paragraphs</h3>
-
-      <h4 class="space">CSS selector:</h4>
-      <p>p</p>
-
-      <h4 class="space">Sample code:</h4>
-
-      <pre>
-          <code>
-&lt;p&gt;<br>
-  Evolve is a company that creates...<br>
-&lt;/p&gt;
-          </code>
-        </pre>
-
-      <h4 class="space">Rendered element:</h4>
-      <p class="space">
-        Evolve's potential customers are city councils, government, construction companies, and real estate developers.
-        These customers are looking to develop green-cities with buildings that incorporate nature with sustainable
-        material. This company focuses on <span class="italic">pushing the boundaries of construction and creating
-          environmentally conscious, sustainable buildings that contribute to a green eco-city.</span> Designs
-        incorporate the natural terrain and adapt to the needs of the community.
-      </p>
-    </section>
-
-    <section class="element">
-      <h3>Numbered Lists</h3>
-
-      <h4 class="space">CSS selector:</h4>
-      <p>ol, li</p>
-
-      <h4 class="space">Sample code:</h4>
-
-      <pre>
-          <code>
-&lt;ol&gt;<br>
-  &lt;li&gt;List 1&lt;/li&gt;<br>
-&lt;/ol&gt;
-          </code>
-        </pre>
-
-      <h4 class="space">Rendered element:</h4>
-      <ol>
-        <li>List 1</li>
-        <li>List 2</li>
-        <li>List 3</li>
-      </ol>
-    </section>
-
-  </section>
-  <!-- // TEXT ELEMENTS SECTION -->
-
-
-
-  <!-- COMBINED ELEMENTS SECTION // -->
-  <section id="combined_elements">
-    <h2>Combined Elements</h2>
-
-    <section class="element">
-      <h3>Main Navigation</h3>
-
-      <h4 class="space">CSS selector:</h4>
-      <p>.nav-menu, .menu-list, .menu-item</p>
-
-      <h4 class="space">Sample code:</h4>
-
-      <pre>
-          <code>
-&lt;nav class="nav-menu"&gt;<br>
-  &lt;ul class="menu-list"&gt;<br>
-    &lt;li class="menu-item"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
-    &lt;li class="menu-item"&gt;&lt;a href="#"&gt;Projects&lt;/a&gt;&lt;/li&gt;<br>
-    &lt;li class="menu-item"&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
-    &lt;li class="menu-item"&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
-  &lt;/ul&gt;<br>
-&lt;/nav&gt;
-          </code>
-        </pre>
-
-      <h4 class="space">Rendered element:</h4>
-      <nav class="nav-menu unfix">
-        <a href="#" class="header-company-title">Evolve</a>
-        <div class="nav-items">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#products">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <a href="checkout.html" class="cta-primary">Let's meet</a>
-      </nav>
-    </section>
-
-    <section class="element">
-      <h3>Product/Service Listing</h3>
-
-      <h4 class="space">CSS selector:</h4>
-      <p>.products-list, .product-card, .article-card, .product-img, .product-content, .product-name, .product-price,
-        .product-description, .product-link, .cta-secondary</p>
-
-      <h4 class="space">Sample code:</h4>
-
-      <pre>
-          <code>
-&lt;section class="products-list"&gt;<br>
-  &lt;div class="product-card"&gt;<br>
-    &lt;div class="article-card"&gt;<br>
-      &lt;figure class=""product-img&gt;<br>
-        &lt;img src="https://an-image-url.com/" alt="Product image"&gt;<br>
-      &lt;/figure&gt;<br><br>
-      &lt;div class="product-content"&gt;<br>
-        &lt;div class="product-name"&gt;Residential&lt;/div&gt;<br>
-        &lt;div class="product-price"&gt;$1000&lt;/div&gt;<br>
-        &lt;a href="" class="product-link cta-secondary"&gt;Let's meet&lt;/div&gt;<br>
-      &lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-  &lt;/div&gt;<br>
-&lt;/section&gt;
-          </code>
-        </pre>
-
-      <h4 class="space">Rendered element:</h4>
-
-      <div class="products-list">
-
-        <div class="product-card">
-          <div class="article-card">
-            <figure class="product-img">
-              <img
-                src="https://images.unsplash.com/photo-1508062878650-88b52897f298?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
-                alt="Temporary product image">
-            </figure>
-            <div class="product-content">
-              <div class="product-name">Residential</div>
-              <div class="product-price">$1000</div>
-              <a href="" class="product-link cta-secondary">Let's meet</a>
+        <div class="progress-indicator">
+            <div class="services-list">
+                <div class="dot"></div>
+                <div class="dot active-dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
             </div>
-          </div>
         </div>
-
-        <div class="product-card">
-          <div class="article-card">
-            <figure class="product-img">
-              <img
-                src="https://images.unsplash.com/photo-1573384293689-0327bf65bd86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=677&q=80"
-                alt="Temporary product image">
-            </figure>
-            <div class="product-content">
-              <div class="product-name">Community</div>
-              <div class="product-price">$1000</div>
-              <a href="" class="product-link cta-secondary">Let's meet</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </section>
 
-    <section class="element">
-      <h3>Payment Form</h3>
+    <section id="service-3" class="service-content section">
+        <div class="service-info">
+            <h3 class="project-type">Industrial</h3>
+            <p>With an eye for design and an awareness
+                of eco-friendly, sustainable manufacturing methods. Our industrial consultations would be
+                perfect for fabricators, manufacturers and other companies making
+                anything from clothing to electronics.
+            </p>
+            <a href="pages/service-2.html" class="cta-secondary">Learn more</a>
+        </div>
+        <div class="service-img ind-img">
+            <div class="vertical-spacer"></div>
+        </div>
 
-      <h4 class="space">CSS selector:</h4>
-      <p>.payment-section, .payment-form, .payment-card-number, .payment-half-width, .payment-cvv, .payment-exp-date,
-        .payment-submit, .btn</p>
+        <div class="progress-indicator">
+            <div class="services-list">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot active-dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </section>
 
-      <h4 class="space">Sample code:</h4>
+    <section id="service-4" class="service-content section">
+        <div class="service-info">
+            <h3 class="project-type">Experimental</h3>
+            <p>Shall we push the boundaries of design together?
+            </p>
+            <a href="pages/service-2.html" class="cta-secondary">Learn more</a>
+        </div>
+        <div class="service-img exp-img">
+            <div class="vertical-spacer"></div>
+        </div>
 
-      <pre>
-          <code>
-&lt;section class="payment-section"&gt;<br>
-  &lt;form class="payment-form" action="index.php" method="post"&gt;<br>
-    &lt;label for="card-num" class="payment-card-number"&gt;Card Number&lt;/label&gt;<br>
-    &lt;input type="number" class="payment-card-number" id="card-num" name="card-num" placeholder="#### ### #### ####"&gt;<br>
+        <div class="progress-indicator">
+            <div class="services-list">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot active-dot"></div>
+            </div>
+        </div>
+    </section>
 
-    &lt;div class="payment-half-width"&gt;<br>
-      &lt;div&gt;<br>
-        &lt;label for="cvv" class="payment-cvv"&gt;CVV&lt;/label&gt;<br>
-        &lt;input type="number" class="payment-cvv" id="cvv" name="cvv" placeholder="CVV"&gt;<br>
-      &lt;/div&gt;<br>
-    &lt;/div&gt;<br>
+    <div class="right-side sticky"></div>
 
-    &lt;div&gt;<br>
-      &lt;div&gt;<br>
-        &lt;label for="exp-date" class="payment-exp-date"&gt;Expiry&lt;/label&gt;<br>
-        &lt;input type="text" class="payment-exp-date" id="exp-date" name="exp-date" placeholder="MM/YY"&gt;<br>
-      &lt;/div&gt;<br>
-    &lt;/div&gt;<br>
+    <div class="left-side sticky">
+        <div class="services-list">
+            <a href="#service-1" class="service-list-item">01</a>
+            <a href="#service-2" class="service-list-item">02</a>
+            <a href="#service-3" class="service-list-item">03</a>
+            <a href="#service-4" class="service-list-item">04</a>
+        </div>
+    </div>
 
-    &lt;button type="button" class="payment-submit btn" name="button"&gt;Confirm payment&lt;/button&gt;<br>
-  &lt;/form&gt;<br>
-&lt;/section&gt;
-          </code>
-        </pre>
+    <div class="fade-out"></div>
 
-      <h4 class="space">Rendered element:</h4>
-      <div class="payment-section">
-        <form class="payment-form" action="index.html" method="post">
+    </section>
 
-          <label for="card-num" class="payment-card-number">Card Number</label>
-          <input type="number" class="payment-card-number" id="card-num" name="card-num"
-            placeholder="#### ### #### ####">
+    <section id="products" class="section">
+        <h2>What are you looking for?</h2>
 
-          <div class="payment-half-width">
-            <div>
-              <label for="cvv" class="payment-cvv">CVV</label>
-              <input type="number" class="payment-cvv" id="cvv" name="cvv" placeholder="CVV">
+        <div class="products-list">
+            <div class="product-card">
+                <div class="article-card">
+                    <figure class="product-img">
+                        <img src="https://images.unsplash.com/photo-1508062878650-88b52897f298?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
+                            alt="Residential">
+                    </figure>
+                    <div class="product-content">
+                        <div class="product-name">Residential</div>
+                        <div class="product-price">$2000-$10000</div>
+                        <div class="cta-secondary product-link booking-cta" onclick="toggleBooking()">Let's meet
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div>
-              <label for="exp-date" class="payment-exp-date">Expiry</label>
-              <input type="text" class="payment-exp-date" id="exp-date" name="exp-date" placeholder="MM/YY">
+            <div class="product-card">
+                <div class="article-card">
+                    <figure class="product-img">
+                        <img src="https://images.unsplash.com/photo-1573384293689-0327bf65bd86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=677&q=80"
+                            alt="Commercial">
+                    </figure>
+                    <div class="product-content">
+                        <div class="product-name">Commercial</div>
+                        <div class="product-price">$2000-$10000</div>
+                        <div class="cta-secondary product-link booking-cta" onclick="toggleBooking()">Let's meet
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </form>
 
-        <button type="button" class="payment-submit btn" name="button">Confirm payment</button>
-
-      </div>
-    </section>
-
-    <section class="element">
-      <h3>Checkout Cart</h3>
-
-      <h4 class="space">CSS selector:</h4>
-      <p>.checkout-cart, .cart-items,. cart-item, .cart-img, .cart-description, .cart-item-name, .cart-desc-right,
-        .cart-item-price, .cart-remove, .cart-price, .pricing, .price-breakdown, .price-total, .checkout-button</p>
-
-      <h4 class="space">Sample code:</h4>
-
-      <pre>
-          <code>
-&lt;section class="checkout-cart"&gt;<br>
-  &lt;div class="cart-items"&gt;<br>
-
-    &lt;div class="cart-item"&gt;<br>
-      &lt;img src="https://some-image-url.com" class="cart-img" alt="Product image"&gt;<br>
-      &lt;div class="cart-description"&gt;<br>
-        &lt;p class="cart-item-name"&gt;Commercial&lt;/p&gt;<br>
-        &lt;div class="cart-desc-right"&gt;<br>
-          &lt;p class="cart-item-price"&gt;$1000&lt;/p&gt;<br>
-          &lt;a href="" class="cart-remove"&gt;Remove&lt;/a&gt;<br>
-        &lt;/div&gt;<br>
-      &lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-
-    &lt;div class="cart-price"&gt;<br>
-      &lt;p class="pricing"&gt;Service Total&lt;/p&gt;<br>
-      &lt;p class="price-breakdown"&gt;$1000 + $70 GST + $50 PST&lt;/p&gt;<br>
-      &lt;p class="price-total"&gt;$1120&lt;/p&gt;<br>
-    &lt;/div&gt;<br>
-
-    &lt;button type="button" class="checkout-button btn-invert" name="button"&gt;Checkout&lt;/button&gt;<br>
-  &lt;/div&gt;<br>
-&lt;/section&gt;
-          </code>
-        </pre>
-
-      <h4 class="space">Rendered element:</h4>
-      <div class="checkout-cart">
-
-        <div class="cart-items">
-
-          <div class="cart-item">
-            <img
-              src="https://images.unsplash.com/photo-1573384293689-0327bf65bd86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=677&q=80"
-              class="cart-img" alt="Temporary product image">
-            <div class="cart-description">
-              <p class="cart-item-name">Commercial</p>
-              <div class="cart-desc-right">
-                <p class="cart-item-price">$1000</p>
-                <a href="" class="cart-remove">Remove</a>
-              </div>
+            <div class="product-card">
+                <div class="article-card">
+                    <figure class="product-img">
+                        <img src="https://images.unsplash.com/photo-1531591022136-eb8b0da1e6d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
+                            alt="industrial">
+                    </figure>
+                    <div class="product-content">
+                        <div class="product-name">Industrial</div>
+                        <div class="product-price">$2000-$10000</div>
+                        <div class="cta-secondary product-link booking-cta" onclick="toggleBooking()">Let's meet
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <div class="cart-item">
-            <img
-              src="https://images.unsplash.com/photo-1560131653-63257db002c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80"
-              class="cart-img" alt="Temporary product image">
-            <div class="cart-description">
-              <p class="cart-item-name">Experimental</p>
-              <div class="cart-desc-right">
-                <p class="cart-item-price">$1000</p>
-                <a href="" class="cart-remove">Remove</a>
-              </div>
+            <div class="product-card">
+                <div class="article-card">
+                    <figure class="product-img">
+                        <img src="https://images.unsplash.com/photo-1560131653-63257db002c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80"
+                            alt="Experimental">
+                    </figure>
+                    <div class="product-content">
+                        <div class="product-name">Experimental</div>
+                        <div class="product-price">$2000-$10000</div>
+                        <div class="cta-secondary product-link booking-cta" onclick="toggleBooking()">Let's meet
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class="cart-price">
-            <p class="pricing">Service Total</p>
-            <p class="price-breakdown">$2000 + $140 GST + $100 PST</p>
-            <p class="price-total">$2240</p>
-          </div>
-
-          <button type="button" class="checkout-button btn-invert" name="button">Checkout</button>
-
         </div>
 
-      </div>
     </section>
 
-  </section>
-  <!-- // COMBINED ELEMENTS SECTION -->
+    <footer>
 
-  <div class="page-link element">
-    Click the buttons to navigate to the other pages
-    <a href="homepage.html" class="button-nav">Homepage</a>
-    <a href="checkout.html" class="button-nav">Checkout</a>
-  </div>
+        <div class="footer-main-content">
+            <div class="footer-company-name">
+                <p class="company">Evolve</p>
+                <p class="company-slogan">Envision the future</p>
+            </div>
+            <div class="footer-company-details">
+                <div class="footer-company-details">
+                    <div class="footer-detail footer-email">
+                        <p class="footer-detail-name">Email</p>
+                        <p class="footer-detail-subtext">Get in touch</p>
+                        <p class="footer-detail-info contact-email">contact@evolve.xyz</p>
+                    </div>
+                    <div class="footer-detail footer-phone">
+                        <p class="footer-detail-name">Phone</p>
+                        <p class="footer-detail-subtext">Call or text</p>
+                        <p class="footer-detail-info">+1 (778) 123 5678</p>
+                    </div>
+                    <div class="footer-detail footer-location">
+                        <p class="footer-detail-name">Location</p>
+                        <p class="footer-detail-subtext">Find us</p>
+                        <p class="footer-detail-info">
+                            13450 102 Ave Unit 250,
+                            Surrey, BC V3T 0A3
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-  <section id="citations">
-    <h2>Citations</h2>
+            <div class="footer-other-links">
+                <div class="footer-links">
+                    <a href="pages/about.html" class="footer-link">About us</a>
+                    <a href="#services" class="footer-link">Services</a>
+                    <a href="pages/portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="pages/styleguide.html" class="footer-link">Styleguide</a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
+                    alt="footer-temporary-image" class="footer-img">
+            </div>
+        </div>
 
-    <ul>
-      <li>
-        30 seconds of code. (2021, October 11). <strong>Hover underline animation.</strong> 30 seconds of code.
-        Retrieved October 14,
-        2022,
-        from <a
-          href="https://www.30secondsofcode.org/css/s/hover-underline-animation">https://www.30secondsofcode.org/css/s/hover-underline-animation</a>
-      </li>
-      <li>
-        Appcode. (2022, October 4). <strong>How to remove the arrows on HTML input type number.</strong> AppCode.
-        Retrieved October 14, 2022, from <a
-          href="https://appcode.app/how-to-remove-the-arrows-on-html-input-type-number/ ">https://appcode.app/how-to-remove-the-arrows-on-html-input-type-number/
-        </a>
-      </li>
-      <li>
-        Coyier, C. (2022, October 11). <strong>A complete guide to flexbox: CSS-tricks.</strong> CSS Tricks. Retrieved
-        October 14, 2022, from <a
-          href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
-      </li>
-      <li>
-        <strong>CSS text-align property.</strong> (n.d.). Retrieved October 14, 2022, from <a
-          href="https://www.w3schools.com/cssref/pr_text_text-align.ASP">https://www.w3schools.com/cssref/pr_text_text-align.ASP
-        </a>
-      </li>
-      <li>
-        CSS Transitions. <strong>CSS transitions.</strong> (n.d.). Retrieved October 14, 2022, from <a
-          href="https://www.w3schools.com/css/css3_transitions.asp">https://www.w3schools.com/css/css3_transitions.asp</a>
-      </li>
-      <li>
-        Generator, maker, and background.<strong>CSS Gradient.</strong>(n.d.). Retrieved October 14, 2022, from <a
-          href="https://cssgradient.io/">https://cssgradient.io/</a>
-      </li>
-      <li>
-        Graham, G. (2022, February 4). <strong>CSS Basics: Styling Links Like a boss: CSS-tricks. CSS Tricks.</strong>
-        Retrieved October 14, 2022, from <a
-          href="https://css-tricks.com/css-basics-styling-links-like-boss/">https://css-tricks.com/css-basics-styling-links-like-boss/</a>
-      </li>
-      <li>
-        House, C. (2022, September 30). <strong>A complete guide to grid: CSS-tricks.</strong> CSS Tricks. Retrieved
-        October 14, 2022,
-        from <a
-          href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a>
-      </li>
-      <li>
-        Kaushik, V. (2021, August 13). <strong>How to create a shopping cart UI using HTML &amp; CSS?</strong> Medium.
-        Retrieved October 14, 2022, from <a
-          href="https://uxplanet.org/how-to-create-a-shopping-cart-ui-using-html-css-e5db3cd55aa0">https://uxplanet.org/how-to-create-a-shopping-cart-ui-using-html-css-e5db3cd55aa0</a>
-      </li>
-      <li>
-        KV30. (2021, July 30). <strong>How to select all child elements recursively using CSS?</strong>GeeksforGeeks.
-        Retrieved October 14, 2022, from <a
-          href="https://www.geeksforgeeks.org/how-to-select-all-child-elements-recursively-using-css/">https://www.geeksforgeeks.org/how-to-select-all-child-elements-recursively-using-css/</a>
-      </li>
-      <li>
-        <strong>Learn web development.</strong> MDN. (n.d.). Retrieved October 14, 2022, from <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/">https://developer.mozilla.org/en-US/docs/Learn/</a>
-      </li>
-      <li>
-        MDN. (n.d.). : <strong>The Input (Form Input) Element.</strong> : The Input (Form Input) Element - HTML:
-        HyperText Markup Language | MDN. Retrieved October 14, 2022, from <a
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input</a>
-      </li>
-      <li>
-        Nicholl, A. (2020, March 4). <strong>How to make a background blur in CSS with one line of code.</strong>
-        Medium. Retrieved October 14, 2022, from <a
-          href="https://blog.prototypr.io/how-to-make-a-background-blur-in-css-with-one-line-of-code-e446c7236e60">https://blog.prototypr.io/how-to-make-a-background-blur-in-css-with-one-line-of-code-e446c7236e60</a>
-      </li>
-      <li>
-        Nordvall, D., BoltClock, Patern, M., SW4SW4, Eregrith, BaneStar007, Hakan, Mihai, Veen, W. van der,
-        MelkorNemesis, &amp; HBhering. (1959, May 1). <strong>Can I write a CSS selector selecting elements not having a
-          certain class or attribute?</strong> Stack Overflow. Retrieved October 14, 2022, from <a
-          href="https://stackoverflow.com/questions/9110300/can-i-write-a-css-selector-selecting-elements-not-having-a-certain-class-or-attr">https://stackoverflow.com/questions/9110300/can-i-write-a-css-selector-selecting-elements-not-having-a-certain-class-or-attr</a>
-      </li>
-      <li>
-        Patel, H. (2022, September 22). <strong>6 creative ideas for CSS link hover effects: CSS-tricks.</strong> CSS
-        Tricks. Retrieved October 14, 2022, from <a
-          href="https://css-tricks.com/css-link-hover-effects/">https://css-tricks.com/css-link-hover-effects/</a>
-      </li>
-      <li>
-        Robertson, C. (n.d.). <strong>Roboto Mono [Font].</strong> Google fonts: Roboto Mono. Retrieved October 14,
-        2022, from <a
-          href="https://fonts.google.com/specimen/Roboto+Mono">https://fonts.google.com/specimen/Roboto+Mono</a>
-      </li>
-      <li>
-        Schennink, R. (n.d.). <strong>Create a fade out overflow effect using CSS mask-image.</strong> PQINA. Retrieved
-        October 14, 2022, from <a
-          href="https://pqina.nl/blog/fade-out-overflow-using-css-mask-image/">https://pqina.nl/blog/fade-out-overflow-using-css-mask-image/</a>
-      </li>
-      <li>
-        Ulanovsky, J., Matas, S., Peral, J. P. de, &amp; Bailly, J. L. (n.d.). <strong>Montserrat [Font].</strong>
-        Google fonts: Montserrat. Retrieved October 14, 2022, from <a
-          href="https://fonts.google.com/specimen/Montserrat">https://fonts.google.com/specimen/Montserrat</a>
-      </li>
-      <li>
-        <strong>Using CSS custom properties (variables) - css: Cascading style sheets: MDN.</strong> CSS: Cascading
-        Style Sheets | MDN. (n.d.). Retrieved October 14, 2022, from <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties</a>
-      </li>
-      <li>
-        W3 Schools. (n.d.). CSS Lists. <strong>CSS Styling Lists.</strong> Retrieved October 14, 2022, from <a
-          href="https://www.w3schools.com/css/css_list.asp">https://www.w3schools.com/css/css_list.asp</a>
-      </li>
-      <li>
-        YouTube. (2021). <strong>Add Scroll Snap with Css.</strong> YouTube. Retrieved October 14, 2022, from <a
-          href="https://www.youtube.com/watch?v=VuLzNdaPBkQ&ab_channel=CodinginPublic.">https://www.youtube.com/watch?v=VuLzNdaPBkQ&amp;ab_channel=CodinginPublic.</a>
-      </li>
-    </ul>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; EVOLVE 2022. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/" class="footer-social in">
+                    <img src="img/icon1.png" alt="linkedin" width="15" height="15">
+                </a>
+                <a href="https://www.facebook.com/" class="footer-social fb">
+                    <img src="img/icon2.png" alt="linkedin" width="15" height="15">
+                </a>
+                <a href="https://www.twitter.com/" class="footer-social tw">
+                    <img src="img/icon3.png" alt="linkedin" width="15" height="15">
+                </a>
 
-  </section>
-
-
-
+                <a href="https://www.instagram.com/" class="footer-social ig">
+                    <img src="img/icon4.png" alt="linkedin" width="15" height="15">
+                </a>
+            </div>
+        </div>
+    </footer>
+    </div>
 </body>
 
 </html>
