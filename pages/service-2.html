@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+
+    <title>Service 2 | Evolve</title>
+
+    <link href="../css/main.css" rel="stylesheet">
+    <script src="../js/scripts.js"></script>
+</head>
+
+<body>
+
+    <header class="nav-header">
+        <nav class="nav-menu">
+            <a href="../index.html" class="header-company-title">Evolve</a>
+            <div class="nav-items desktop">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="cta-primary desktop booking-cta" onclick="toggleBooking()">Let's meet</div>
+            <div class="temp-menu-toggle mobile" onclick="toggleMenu()"></div>
+
+            <div class="mobile-nav-items mobile">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <div class="cta-primary booking-cta" onclick="toggleBooking()">Let's meet</div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="temporary-content">
+        <div class="booking-popup">
+            <div class="close-popup" onclick="toggleBooking()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                </svg>
+            </div>
+            <form id="book-service-form" name="book-service-form" class="booking-form">
+                <h5 class="">Book A Meeting</h5>
+                <div class="booking-line-1">
+                    <p class="form-text">I'm</p>
+                    <input type="text" class="booking-form-short-input" name="your-name" data-name="your name"
+                        placeholder="your name" id="your-name">
+                    <p class="form-text">from</p>
+                    <input type="text" class="booking-form-short-input" name="company" data-name="company"
+                        placeholder="company" id="company">
+                </div>
+                <div class="booking-line-2">
+                    <p class="form-text">I'd like to discuss a</p>
+                    <input type="text" class="booking-form-short-input" name="project-idea" data-name="project idea"
+                        placeholder="project idea" id="project-idea">
+                    <p class="form-text">project idea.</p>
+                </div>
+                <input type="text" class="booking-line-3" name="project-pitch" id="project-pitch"
+                    placeholder="(optional) tell us about your project!">
+
+                <div class="booking-line-4">
+                    <p class="form-text">Our budget for this project is</p>
+                    <input type="text" class="booking-form-short-input" name="project-budjet" data-name="project budjet"
+                        placeholder="$000,000,000" id="project-budjet">
+                </div>
+                <div class="booking-line-5">
+                    <p class="form-text">You can find me at</p>
+                    <input type="text" class="booking-form-short-input" name="email" data-name="email"
+                        placeholder="email" id="email">
+                </div>
+            </form>
+            <button class="booking-submit">Submit</button>
+        </div>
+    </div>
+
+    <div class="service2">
+        <div class="title">
+            <h1>Rec Concept</h1>
+        </div>
+        <div class="service-img">
+            <div class="left">
+                <h2>Tokyo
+                    Japan
+                    2020
+                    feb20</h2>
+            </div>
+            <div class="image">
+                <img src="../img/11.png" alt="service2's picture">
+            </div>
+            <div class="service-type">
+                <h3>Industrial</h3>
+            </div>
+        </div>
+    </div>
+    <section class="service-content">
+        <div class="summary">
+            <div>
+                <h3>SUMMARY</h3>
+            </div>
+            <div class="service-summary-info">
+                <div class="top">
+                    <h6>CLIENT REQUEST</h6>
+                    <p>Our client contacted us with the idea of creating a space that was capable of hosting the 2020
+                        Olympics.</p>
+                </div>
+                <div class="bottom">
+                    <h6>OUR TASK</h6>
+                    <p>We began to scout out the location and identify the core values that the client wanted to
+                        express.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-content">
+        <div class="problem-solution">
+            <div>
+                <h3>PROBLEM-SOLUTION</h3>
+            </div>
+            <div class="problem-solutinon-content">
+                <div class="left">
+                    <div class="problem">
+                        <h6>PROBLEM</h6>
+                    </div>
+                    <ol>
+                        <li>GEOGRAPHY
+                            <p>The land is located in an area known for tsunamis and earthquakes.</p>
+                        </li>
+                        <li>CLIMATE
+                            <P>The area has hot and humid summers and cold winters.</P>
+                        </li>
+                        <li>LIFESTYLE
+                            <p>People travel, walk, bike, commute, and often crowd the streets throughout the day...</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="right">
+                    <div class="solution">
+                        <h6>SOLUTION</h6>
+                    </div>
+                    <ol>
+                        <li>GEOGRAPHA
+                            <p>The building was designed to withstand earthquakes and tsunamis and are flexible to
+                                disperse the impacts.</p>
+                        </li>
+                        <li>CLIMATE
+                            <P>Materials were chosen with the capability to expand and contract, while still retaining
+                                flexibility as the weather changes throughout the year.</P>
+                        </li>
+                        <li>LIFESTYLE
+                            <p>Major intersections and traffic areas were taken into account while designing the faces
+                                and facades of the building. Certain angles and windowed areas were avoided to prevent
+                                angling towards pedestrians throughout the seasons.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="service-content">
+        <div class="process">
+            <div>
+                <h3>PROCESS</h3>
+            </div>
+            <div class="process-content">
+                <div class="top">
+                    <h6>RESEARCH</h6>
+                    <p>We started by analyzing the core idea and experience the client wanted to create, we also looked
+                        at previous Olympic facilities and the history and values that the Olympics stood for.</p>
+                </div>
+                <div class="middle">
+                    <h6>IDEATION</h6>
+                    <p>Next up was to communicate our findings with the client and begin creating our initial
+                        concepts. The client chose a mix between a large open arena with the capacity to adapt it for
+                        use into
+                        concerts and other events.</p>
+                </div>
+                <div class="bottom">
+                    <h6>REFINING</h6>
+                    <p>Then, through repeat feedback, we continually refined our designs to accomodate client requests
+                        while maintaining the core values identified earlier.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>Interested?</h3>
+        <div class="cta-primary booking-cta" onclick="toggleBooking()">Let's meet</div>
+    </section>
+
+
+
+
+
+    <footer>
+        <div class="footer-main-content">
+            <div class="footer-company-name">
+                <p class="company">Evolve</p>
+                <p class="company-slogan">Envision the future</p>
+            </div>
+            <div class="footer-company-details">
+                <div class="footer-company-details">
+                    <div class="footer-detail footer-email">
+                        <p class="footer-detail-name">Email</p>
+                        <p class="footer-detail-subtext">Get in touch</p>
+                        <p class="footer-detail-info contact-email">contact@evolve.xyz</p>
+                    </div>
+                    <div class="footer-detail footer-phone">
+                        <p class="footer-detail-name">Phone</p>
+                        <p class="footer-detail-subtext">Call or text</p>
+                        <p class="footer-detail-info">+1 (778) 123 5678</p>
+                    </div>
+                    <div class="footer-detail footer-location">
+                        <p class="footer-detail-name">Location</p>
+                        <p class="footer-detail-subtext">Find us</p>
+                        <p class="footer-detail-info">
+                            13450 102 Ave Unit 250,
+                            Surrey, BC V3T 0A3
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-other-links">
+                <div class="footer-links">
+                    <a href="about.html" class="footer-link">About us</a>
+                    <a href="../index.html#services" class="footer-link">Services</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="styleguide.html" class="footer-link">Styleguide</a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
+                    alt="footer-temporary-image" class="footer-img">
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">&copy; EVOLVE 2022. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/" class="footer-social in">
+                    <img src="../img/icon1.png" alt="linkedin" width="15" height="15">
+                </a>
+                <a href="https://www.facebook.com/" class="footer-social fb">
+                    <img src="../img/icon2.png" alt="linkedin" width="15" height="15">
+                </a>
+                <a href="https://www.twitter.com/" class="footer-social tw">
+                    <img src="../img/icon3.png" alt="linkedin" width="15" height="15">
+                </a>
+
+                <a href="https://www.instagram.com/" class="footer-social ig">
+                    <img src="../img/icon4.png" alt="linkedin" width="15" height="15">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
