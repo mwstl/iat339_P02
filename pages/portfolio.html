@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+
+    <title>Portfolio | Evolve</title>
+
+    <link href="../css/main.css" rel="stylesheet">
+    <script src="../js/scripts.js"></script>
+</head>
+
+<body>
+
+    <header class="nav-header">
+        <nav class="nav-menu">
+            <a href="../index.html" class="header-company-title">Evolve</a>
+            <div class="nav-items desktop">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="cta-primary desktop booking-cta" onclick="toggleBooking()">Let's meet</div>
+            <div class="temp-menu-toggle mobile" onclick="toggleMenu()"></div>
+
+            <div class="mobile-nav-items mobile">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <div class="cta-primary booking-cta" onclick="toggleBooking()">Let's meet</div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="temporary-content">
+        <div class="booking-popup">
+            <div class="close-popup" onclick="toggleBooking()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                </svg>
+            </div>
+            <form id="book-service-form" name="book-service-form" class="booking-form">
+                <h5 class="">Book A Meeting</h5>
+                <div class="booking-line-1">
+                    <p class="form-text">I'm</p>
+                    <input type="text" class="booking-form-short-input" name="your-name" data-name="your name"
+                        placeholder="your name" id="your-name">
+                    <p class="form-text">from</p>
+                    <input type="text" class="booking-form-short-input" name="company" data-name="company"
+                        placeholder="company" id="company">
+                </div>
+                <div class="booking-line-2">
+                    <p class="form-text">I'd like to discuss a</p>
+                    <input type="text" class="booking-form-short-input" name="project-idea" data-name="project idea"
+                        placeholder="project idea" id="project-idea">
+                    <p class="form-text">project idea.</p>
+                </div>
+                <input type="text" class="booking-line-3" name="project-pitch" id="project-pitch"
+                    placeholder="(optional) tell us about your project!">
+
+                <div class="booking-line-4">
+                    <p class="form-text">Our budget for this project is</p>
+                    <input type="text" class="booking-form-short-input" name="project-budjet" data-name="project budjet"
+                        placeholder="$000,000,000" id="project-budjet">
+                </div>
+                <div class="booking-line-5">
+                    <p class="form-text">You can find me at</p>
+                    <input type="text" class="booking-form-short-input" name="email" data-name="email"
+                        placeholder="email" id="email">
+                </div>
+            </form>
+            <button class="booking-submit">Submit</button>
+        </div>
+    </div>
+
+    <div class="portfolio-content">
+        <div class="portfolio-title-content">
+            <div class="left-title">
+                <h1>PROJECTS</h1>
+            </div>
+            <div class="right-title">
+                <h5>30+ PROJECTS<h5>
+            </div>
+        </div>
+        <div class="boxing-line1">
+            <!-- <div class="box-left1">
+                <a class="button-seemore" href="service-1.html">See more</a>
+            </div> -->
+            <div class="content-right">
+                <div class="content-top">
+                    <div class="box-middle">
+                        <h2>Project 1 Name</h2>
+                        <p>This collaborative project between ASDF and EVOLVE is an experimental test to push the
+                            boundaries of what architecture is capable of, and combines AI with generative algorithmic
+                            structures.</p>
+                            
+                        <h5>Experimental</h5>
+                    </div>
+                    <div class="right">
+                        <!-- <figure class="figure-link"> -->
+                            <a href="service-1.html" target="_blank">
+                                <img class=" image-link"
+                                    src="https://images.unsplash.com/photo-1560131653-63257db002c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80"
+                                    alt="Experimental">
+                            </a>
+                            <!-- <figcaption>View our project</figcaption>
+                        </figure> -->
+
+                    </div>
+                </div>
+                <div class="content-bottom">
+                    <div class="box-middle">
+                        <!-- <figure class="figure-link"> -->
+                            <a href="service-2.html" target="_blank">
+                                <img class=" image-link"
+                                    src="https://images.unsplash.com/photo-1531591022136-eb8b0da1e6d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
+                                    alt="industrial">
+                            </a>
+                            <!-- <figcaption>View our project</figcaption>
+                        </figure> -->
+
+                    </div>
+                    <div class="right">
+                        <h2>Project 2 Name</h2>
+                        <p>This collaborative project between ASDF and EVOLVE is an experimental test to push the
+                            boundaries of what architecture is capable of, and combines AI with generative algorithmic
+                            structures.</p>
+                        <h5>Industrial</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+
+        <div class="footer-main-content">
+            <div class="footer-company-name">
+                <p class="company">Evolve</p>
+                <p class="company-slogan">Envision the future</p>
+            </div>
+            <div class="footer-company-details">
+                <div class="footer-company-details">
+                    <div class="footer-detail footer-email">
+                        <p class="footer-detail-name">Email</p>
+                        <p class="footer-detail-subtext">Get in touch</p>
+                        <p class="footer-detail-info contact-email">contact@evolve.xyz</p>
+                    </div>
+                    <div class="footer-detail footer-phone">
+                        <p class="footer-detail-name">Phone</p>
+                        <p class="footer-detail-subtext">Call or text</p>
+                        <p class="footer-detail-info">+1 (778) 123 5678</p>
+                    </div>
+                    <div class="footer-detail footer-location">
+                        <p class="footer-detail-name">Location</p>
+                        <p class="footer-detail-subtext">Find us</p>
+                        <p class="footer-detail-info">
+                            13450 102 Ave Unit 250,
+                            Surrey, BC V3T 0A3
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-other-links">
+                <div class="footer-links">
+                    <a href="about.html" class="footer-link">About us</a>
+                    <a href="../index.html#services" class="footer-link">Services</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="styleguide.html" class="footer-link">Styleguide</a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
+                    alt="footer-temporary-image" class="footer-img">
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">&copy; EVOLVE 2022. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/" class="footer-social in">
+                    <img src="../img/icon1.png" alt="linkedin" width="15" height="15">
+                </a>
+                <a href="https://www.facebook.com/" class="footer-social fb">
+                    <img src="../img/icon2.png" alt="linkedin" width="15" height="15">
+                </a>
+                <a href="https://www.twitter.com/" class="footer-social tw">
+                    <img src="../img/icon3.png" alt="linkedin" width="15" height="15">
+                </a>
+
+                <a href="https://www.instagram.com/" class="footer-social ig">
+                    <img src="../img/icon4.png" alt="linkedin" width="15" height="15">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
