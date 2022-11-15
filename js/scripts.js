@@ -18,3 +18,6 @@ function toggleBooking() {
   isBookingOpen = true;
   document.body.classList += " booking-open";
 }
+
+
+
