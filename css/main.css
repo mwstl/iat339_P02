@@ -25,7 +25,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border:1px solid red;
+  /* border:1px solid red; */
 }
 
 html {
@@ -2094,7 +2094,7 @@ footer {
   }
   .project-service-img>.left h2{
     font-size:20px;
-    border:1px solid red;
+    /* border:1px solid red; */
   }
 }
 
@@ -2400,7 +2400,7 @@ footer {
     font-size:30px;
     padding-bottom:0;
     margin-right:0;
-    border:1px solid black;
+    /* border:1px solid black; */
   }
 
   .project-service-img >.left h2{
