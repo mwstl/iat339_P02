@@ -1946,10 +1946,14 @@ footer {
 
 .footer-other-links {
   grid-row: 1 / span 2;
+  /* grid-row: 1; */
   grid-column: 2;
   justify-self: end;
+  align-self: flex-end;
   overflow: hidden;
+  
 }
+
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -2055,6 +2059,7 @@ footer {
   font-size: 3rem;
   line-height: 3.25rem;
   margin-bottom: 2rem;
+  margin-top: 5rem;
 }
 
 .booking-line-1,
@@ -2083,6 +2088,7 @@ footer {
   bottom: 30%;
   border: 1rem solid var(--bg);
   padding: 1rem 1.5rem; */
+  margin-top: 9rem;
 }
 
 .temp-menu-toggle {
