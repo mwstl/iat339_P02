@@ -18,13 +18,19 @@
         <nav class="nav-menu">
             <a href="../index.html" class="header-company-title">Evolve</a>
             <div class="nav-items desktop">
-                <a href="../index.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="portfolio.html">Projects</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="cta-primary desktop booking-cta" onclick="toggleBooking()">Let's meet</div>
-            <div class="temp-menu-toggle mobile" onclick="toggleMenu()"></div>
+
+            <a class="menu-toggle mobile" onclick="toggleMenu()">
+                <ul class="menu-lines">
+                    <li class="menu-line"></li>
+                    <li class="menu-line"></li>
+                </ul>
+            </a>
 
             <div class="mobile-nav-items mobile">
                 <a href="../index.html">Home</a>
@@ -70,11 +76,11 @@
                 </div>
                 <div class="booking-line-5">
                     <p class="form-text">You can find me at</p>
-                    <input type="text" class="booking-form-short-input" name="email" data-name="email"
-                        placeholder="email" id="email">
+                    <input type="text" class="booking-form-short-input" name="booking-email" data-name="booking-email"
+                        placeholder="email" id="booking-email">
                 </div>
             </form>
-            <button class="booking-submit" onclick="alert('Successful booking'); toggleBooking();">Submit</button>
+            <a class="booking-submit" href="submit-success.html">Submit</a>
         </div>
     </div>
 
@@ -87,30 +93,29 @@
             <div class="info">
                 <div class="left">
                     <div class="location">
-                        <img src="../img/icon5.png" width="20px" height="20px" alt="this is location icon">
+                        <img src="../img/location-icon.png" width="20px" height="20px" alt="this is location icon">
                         <p class="info">
                             13450 102 Ave Unit 250,
                             Surrey, BC V3T 0A3
                         </p>
                     </div>
                     <div class="email">
-                        <img src="../img/icon6.png" width="20px" height="20px" alt="this is email icon">
+                        <img src="../img/email-icon.png" width="20px" height="20px" alt="this is email icon">
                         <p class=" contact-email">contact@evolve.xyz</p>
                     </div>
                     <div class="phone">
-                        <img src="../img/icon7.png" width="20px" height="20px" alt="this is phone icon">
+                        <img src="../img/phone-icon.png" width="20px" height="20px" alt="this is phone icon">
                         <p class="phone-number">+1 (778) 123 5678</p>
                     </div>
                 </div>
                 <div class="right">
-                    <img src="../img/8.png" alt="this is location map">
+                    <img src="../img/location-map-image.png" alt="this is location map">
                 </div>
             </div>
         </div>
 
         <div class="contact-cta">
             <h3>Interested in working on a project?</h3>
-            <!-- <div class="cta-primary booking-cta" onclick="toggleBooking()">Let's meet</div> -->
 
             <h3>or, have an inquiry/question?</h3>
         </div>
@@ -137,7 +142,7 @@
             </div>
         </div>
         <div class="contact-button">
-            <button class="button-submit">Submit</button>
+            <a class="booking-submit" href="submit-success.html">Submit</a>
         </div>
     </div>
 

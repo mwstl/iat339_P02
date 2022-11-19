@@ -18,13 +18,19 @@
         <nav class="nav-menu">
             <a href="../index.html" class="header-company-title">Evolve</a>
             <div class="nav-items desktop">
-                <a href="../index.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="portfolio.html">Projects</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="cta-primary desktop booking-cta" onclick="toggleBooking()">Let's meet</div>
-            <div class="temp-menu-toggle mobile" onclick="toggleMenu()"></div>
+
+            <a class="menu-toggle mobile" onclick="toggleMenu()">
+                <ul class="menu-lines">
+                    <li class="menu-line"></li>
+                    <li class="menu-line"></li>
+                </ul>
+            </a>
 
             <div class="mobile-nav-items mobile">
                 <a href="../index.html">Home</a>
@@ -74,7 +80,7 @@
                         placeholder="email" id="email">
                 </div>
             </form>
-            <button class="booking-submit" onclick="alert('Successful booking'); toggleBooking();">Submit</button>
+            <a class="booking-submit" href="submit-success.html">Submit</a>
         </div>
     </div>
 
@@ -82,15 +88,15 @@
         <div class="title">
             <h1>Linear Spaces</h1>
         </div>
-        <div class="project-service-img">
-            <div class="left">
+        <div class="project-service-hero">
+            <div class="project-left-info">
                 <h2>Jakarta
                     Indonesia
                     2022
                     Jul06</h2>
             </div>
             <div class="image">
-                <img src="../img/12.png" alt="service2's picture">
+                <img src="../img/service-2-image.png" alt="service2's picture">
             </div>
             <div class="service-type">
                 <h3>Experimental</h3>

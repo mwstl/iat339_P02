@@ -19,5 +19,8 @@ function toggleBooking() {
   document.body.classList += " booking-open";
 }
 
-
-
+document.addEventListener("DOMContentLoaded", (event) => {
+  document.querySelector(".menu-toggle").addEventListener("click", () => {
+    document.querySelector("body").classList.toggle("toggled");
+  });
+});

@@ -25,14 +25,20 @@
                 <a href="pages/contact.html">Contact</a>
             </div>
             <div class="cta-primary desktop booking-cta" onclick="toggleBooking()">Let's meet</div>
-            <div class="temp-menu-toggle mobile" onclick="toggleMenu()"></div>
+
+            <a class="menu-toggle mobile" onclick="toggleMenu()">
+                <ul class="menu-lines">
+                    <li class="menu-line"></li>
+                    <li class="menu-line"></li>
+                </ul>
+            </a>
 
             <div class="mobile-nav-items mobile">
                 <a href="index.html">Home</a>
                 <a href="pages/about.html">About</a>
                 <a href="pages/portfolio.html">Projects</a>
                 <a href="pages/contact.html">Contact</a>
-                <div class="cta-primary desktop booking-cta" onclick="toggleBooking()">Let's meet</div>
+                <div class="cta-primary booking-cta" onclick="toggleBooking()">Let's meet</div>
             </div>
         </nav>
     </header>
@@ -75,7 +81,7 @@
                         placeholder="email" id="email">
                 </div>
             </form>
-            <button class="booking-submit" onclick="alert('Successful booking'); toggleBooking();">Submit</button>
+            <a class="booking-submit" onclick="toggleBooking()" href="pages/submit-success.html">Submit</a>
         </div>
     </div>
 
@@ -87,7 +93,7 @@
         </section>
 
         <section id="services" class="section">
-            <h2 class="services-intro sticky">
+            <h2 class="services-intro">
                 We can discuss...
             </h2>
 
@@ -105,15 +111,6 @@
                     <div class="vertical-spacer"></div>
                 </div>
             </section>
-
-            <div class="progress-indicator">
-                <div class="services-list">
-                    <div class="dot active-dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
-            </div>
         </section>
 
         <section id="service-2" class="service-content section">
@@ -128,16 +125,6 @@
             </div>
             <div class="service-img comm-img">
                 <div class="vertical-spacer"></div>
-            </div>
-
-
-            <div class="progress-indicator">
-                <div class="services-list">
-                    <div class="dot"></div>
-                    <div class="dot active-dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
             </div>
         </section>
 
@@ -154,15 +141,6 @@
             <div class="service-img ind-img">
                 <div class="vertical-spacer"></div>
             </div>
-
-            <div class="progress-indicator">
-                <div class="services-list">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot active-dot"></div>
-                    <div class="dot"></div>
-                </div>
-            </div>
         </section>
 
         <section id="service-4" class="service-content section">
@@ -175,31 +153,26 @@
             <div class="service-img exp-img">
                 <div class="vertical-spacer"></div>
             </div>
-
-            <div class="progress-indicator">
-                <div class="services-list">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot active-dot"></div>
-                </div>
-            </div>
         </section>
-
-        <div class="right-side sticky"></div>
-
         <div class="left-side sticky">
             <div class="services-list">
-                <a href="#service-1" class="service-list-item">01</a>
-                <a href="#service-2" class="service-list-item">02</a>
-                <a href="#service-3" class="service-list-item">03</a>
-                <a href="#service-4" class="service-list-item">04</a>
+                <span class="service-list-item text-link">
+                    <a href="#service-1" class="service-list-item">01</a>
+                </span>
+                <span class="service-list-item text-link">
+                    <a href="#service-2" class="service-list-item">02</a>
+                </span>
+                <span class="service-list-item text-link">
+                    <a href="#service-3" class="service-list-item">03</a>
+                </span>
+                <span class="service-list-item text-link">
+                    <a href="#service-4" class="service-list-item">04</a>
+                </span>
             </div>
         </div>
 
         <div class="fade-out"></div>
 
-        </section>
 
         <section id="products" class="section">
             <h2>What are you looking for?</h2>
@@ -282,7 +255,7 @@
                             Surrey, BC V3T 0A3
                         </p>
                     </div>
-                        
+
                 </div>
 
                 <div class="footer-other-links">
